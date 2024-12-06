@@ -24,3 +24,6 @@ int *max(int *a, int*b){
     if (*a > *b) return a;
     return b;
 }
+int *median(const int a[], int n){
+    return &a[n/2];
+}
