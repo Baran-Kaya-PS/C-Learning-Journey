@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "bookrelated.h"
-#define N 50
+#define N 5
 int main() {
 
     int a = 42;

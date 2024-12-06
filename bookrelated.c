@@ -1,6 +1,5 @@
 //
 // Created by Baran on 12/6/2024.
-//
 #include "bookrelated.h"
 void increment(int *p) { // p est un pointeur
     *p = *p + 1; // Modifie la valeur de la variable pointée

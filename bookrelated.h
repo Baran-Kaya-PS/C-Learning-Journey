@@ -4,7 +4,6 @@
 
 #ifndef MEMORY_GESTION_BOOKRELATED_H
 #define MEMORY_GESTION_BOOKRELATED_H
-
 #endif //MEMORY_GESTION_BOOKRELATED_H
 
 void increment(int *p);
