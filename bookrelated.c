@@ -35,3 +35,9 @@ void avg_sum(const double a[],int n, double *avg, double *sum){
     }
     *avg = *sum/n;
 }
+void swap(int *i, int*j){
+    int temp;
+    temp = *i;
+    *i = *j;
+    *j = temp;
+}
