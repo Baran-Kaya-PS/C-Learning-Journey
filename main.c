@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include "bookrelated.h"
-#define N 5
+#include "arraygeneration.h"
+
 int main() {
 
     int a = 42;
@@ -24,5 +25,16 @@ int main() {
     j = 4;
     p = max(&i,&j);
     printf("value of max(3,4) : %d\n",*p);
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    int b[SIZE];
+    generateArray(b,SIZE);
+    sortArray(b,SIZE);
+    printf("b[1] = %d",b[0]);
+    for (i = 1; i < SIZE; i++){
+        printf("\tb[%d] = %d",i+1,b[i]);
+    }
+    printf("\n median of b is %d",*median(b,SIZE));
     return 0;
 }
