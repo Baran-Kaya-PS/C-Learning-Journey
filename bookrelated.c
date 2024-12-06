@@ -20,3 +20,7 @@ void max_min(int a[], int n, int *max, int *min){
         if(a[i] < *min) *min = a[i]; // assigne le min
     }
 }
+int *max(int *a, int*b){
+    if (*a > *b) return a;
+    return b;
+}
