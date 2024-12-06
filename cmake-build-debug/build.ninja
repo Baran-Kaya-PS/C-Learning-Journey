@@ -61,6 +61,12 @@ build CMakeFiles/memory_gestion.dir/bookrelated.c.obj: C_COMPILER__memory_gestio
   OBJECT_DIR = CMakeFiles\memory_gestion.dir
   OBJECT_FILE_DIR = CMakeFiles\memory_gestion.dir
 
+build CMakeFiles/memory_gestion.dir/arraygeneration.c.obj: C_COMPILER__memory_gestion_unscanned_Debug C$:/Users/Baran/CLionProjects/memory_gestion/arraygeneration.c || cmake_object_order_depends_target_memory_gestion
+  DEP_FILE = CMakeFiles\memory_gestion.dir\arraygeneration.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\memory_gestion.dir
+  OBJECT_FILE_DIR = CMakeFiles\memory_gestion.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target memory_gestion
@@ -69,7 +75,7 @@ build CMakeFiles/memory_gestion.dir/bookrelated.c.obj: C_COMPILER__memory_gestio
 #############################################
 # Link the executable memory_gestion.exe
 
-build memory_gestion.exe: C_EXECUTABLE_LINKER__memory_gestion_Debug CMakeFiles/memory_gestion.dir/main.c.obj CMakeFiles/memory_gestion.dir/bookrelated.c.obj
+build memory_gestion.exe: C_EXECUTABLE_LINKER__memory_gestion_Debug CMakeFiles/memory_gestion.dir/main.c.obj CMakeFiles/memory_gestion.dir/bookrelated.c.obj CMakeFiles/memory_gestion.dir/arraygeneration.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\memory_gestion.dir
