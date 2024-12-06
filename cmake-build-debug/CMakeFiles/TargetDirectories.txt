@@ -1,0 +1,3 @@
+C:/Users/Baran/CLionProjects/memory_gestion/cmake-build-debug/CMakeFiles/memory_gestion.dir
+C:/Users/Baran/CLionProjects/memory_gestion/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Baran/CLionProjects/memory_gestion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
