@@ -15,3 +15,4 @@ int *max(int *a , int *b);
 int *median(const int a[], int n);
 void avg_sum(const double a[],int n, double *avg, double *sum);
 void swap(int *,int*);
+void find_two_largest(const int a[], int n, int *largest, int *second_largest);
