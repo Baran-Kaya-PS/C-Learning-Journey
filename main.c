@@ -29,12 +29,25 @@ int main() {
 
     ///////////////////////////////////////////////////////////////////////////////////
     int b[SIZE];
-    generateArray(b,SIZE);
+    generateIntArray(b,SIZE);
     sortArray(b,SIZE);
     printf("b[1] = %d",b[0]);
     for (i = 1; i < SIZE; i++){
         printf("\tb[%d] = %d",i+1,b[i]);
     }
-    printf("\n median of b is %d",*median(b,SIZE));
+    printf("\n median of b is %d\n",*median(b,SIZE));
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    double avg;
+    double sum;
+    double c[SIZE];
+    generateDoubleArray(c,SIZE);
+    printf("c[1] = %f",c[0]);
+    for (i = 1; i < SIZE; i++){
+        printf("\tc[%d] = %f",i+1,c[i]);
+    }
+    avg_sum( c, SIZE, (double *) &avg, &sum);
+    printf("the average of c is %lf\t the sum is %lf\n",avg,sum);
     return 0;
 }
