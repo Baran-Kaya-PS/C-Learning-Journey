@@ -12,7 +12,7 @@ void decompose(double x, long *int_part, double *frac_part){
     *int_part = (long) x;
     *frac_part = (double) (x - *int_part);
 }
-void max_min(int a[], int n, int *max, int *min){
+void max_min(const int a[], int n, int *max, int *min){
     int i;
     *max,*min = a[0];
     for (i = 0; i < n;i++){
