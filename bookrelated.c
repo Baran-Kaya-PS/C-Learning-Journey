@@ -14,5 +14,10 @@ void decompose(double x, long *int_part, double *frac_part){
     *frac_part = (double) (x - *int_part);
 }
 void max_min(int a[], int n, int *max, int *min){
-
+    int i;
+    *max,*min = a[0];
+    for (i = 0; i < n;i++){
+        if(a[i] > *max) *max = a[i]; // assigne le max
+        if(a[i] < *min) *min = a[i]; // assigne le min
+    }
 }
