@@ -54,3 +54,12 @@ void find_two_largest(const int a[], int n, int *largest, int *second_largest){
         if (*largest < *second_largest) swap(largest,second_largest);
     }
 }
+void pay_amount(int dollars,int *twenties,int *tens,int *five,int *ones){
+    *twenties = dollars/20;
+    dollars = dollars%20;
+    *tens = dollars/10;
+    dollars = dollars%10;
+    *five = dollars/5;
+    dollars = dollars%5;
+    *ones = dollars;
+}
