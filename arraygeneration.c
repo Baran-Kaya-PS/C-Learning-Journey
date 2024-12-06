@@ -5,10 +5,16 @@
 #include <stdlib.h>
 #include <time.h>
 #include "arraygeneration.h"
-void generateArray(int array[],int size){
+void generateIntArray(int array[],int size){
     srand(time(NULL));
     for (int i = 0; i < size;i++){
         array[i] = rand() % 100;
+    }
+}
+void generateDoubleArray(double array[],int size){
+    srand(time(NULL));
+    for (int i = 0; i < size;i++){
+        array[i] = (rand() % 100)+(rand()%10)*0.1+(rand()%10)*0.01;
     }
 }
 

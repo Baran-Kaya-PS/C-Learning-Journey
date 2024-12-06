@@ -6,5 +6,6 @@
 #define MEMORY_GESTION_ARRAYGENERATION_H
 
 #endif //MEMORY_GESTION_ARRAYGENERATION_H
-void generateArray(int array[],int size);
+void generateIntArray(int array[],int size);
 void sortArray(int array[],int size);
+void generateDoubleArray(double array[],int size);
