@@ -65,6 +65,12 @@ int main() {
         printf("\tb[%d] = %d",i+1,b[i]);
     }
     find_two_largest(b,SIZE,&largest,&second_largest);
-    printf("the 2 largest values are \t%d\t%d",largest,second_largest);
+    printf("the 2 largest values are \t%d\t%d\n",largest,second_largest);
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    int tw,te,fi,on;
+    pay_amount(199,&tw,&te,&fi,&on);
+    printf("to miminise 199 dolars into money bill you have\t\t %d 20$, %d 10$, %d 5$, %d 1$",tw,te,fi,on);
     return 0;
 }
