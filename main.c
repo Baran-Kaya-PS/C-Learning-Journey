@@ -56,5 +56,15 @@ int main() {
     i = 5;
     swap(&j,&i);
     printf("%d j,\t%d i\n",j,i);
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    int largest, second_largest;
+    printf("\n\nb[1] = %d",b[0]);
+    for (i = 1; i < SIZE; i++){
+        printf("\tb[%d] = %d",i+1,b[i]);
+    }
+    find_two_largest(b,SIZE,&largest,&second_largest);
+    printf("the 2 largest values are \t%d\t%d",largest,second_largest);
     return 0;
 }
