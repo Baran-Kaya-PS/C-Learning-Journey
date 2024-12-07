@@ -6,6 +6,7 @@
 #define MEMORY_GESTION_BOOKRELATED_H
 #endif //MEMORY_GESTION_BOOKRELATED_H
 
+// CHAPTER 11
 void increment(int *p);
 void increment2(int x);
 void decompose(double x,long *,double *); // pas besoin de nommer les variables pointeurs
@@ -17,3 +18,5 @@ void avg_sum(const double a[],int n,double *avg,double *sum);
 void swap(int *,int*);
 void find_two_largest(const int a[],int n,int *largest,int *second_largest);
 void pay_amount(int dollars,int *twenties,int *tens,int *five,int *ones);
+//CHAPTER 12
+void reverse(); // read 10 numbers then write the number in reverse order

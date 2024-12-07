@@ -1,6 +1,8 @@
 //
 // Created by Baran on 12/6/2024.
 #include "bookrelated.h"
+#include <stdio.h>
+// CHAPTER 11 POINTERS
 void increment(int *p) { // p est un pointeur
     *p = *p + 1; // Modifie la valeur de la variable pointée
 }
@@ -62,4 +64,16 @@ void pay_amount(int dollars,int *twenties,int *tens,int *five,int *ones){
     *five = dollars/5;
     dollars = dollars%5;
     *ones = dollars;
+}
+//CHAPTER 12 POINTERS AND ARRAYS
+void reverse(){
+    int a[9],*p;
+    for (p = a ; p < a+9; p++){
+        printf("\nEnter a number : ");
+        scanf("%d",p); // itère de a[0] à a[n], n = 9;
+    }
+    printf("\nreverse order\n");
+    for (p = a+8; p >= a;p--){
+        printf(" %d",*p);
+    }
 }
