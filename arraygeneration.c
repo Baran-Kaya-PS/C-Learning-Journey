@@ -17,6 +17,22 @@ void generateDoubleArray(double array[],int size){
         array[i] = (rand() % 100)+(rand()%10)*0.1+(rand()%10)*0.01;
     }
 }
+void generateIntMatrix(int rows, int cols, int array[rows][cols]){
+    srand(time(NULL));
+    for (int i = 0; i < rows;i++){
+        for (int j = 0; j < cols;j++) {
+            array[i][j] = rand() % 100;
+        }
+    }
+}
+void printIntMatrix(int rows, int cols, int array[rows][cols]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t ", array[i][j]);
+        }
+        printf("\n");
+    }
+}
 
 void sortArray(int array[], int size){ // tri à bulle
     for (int i = 0; i < size; i++){
