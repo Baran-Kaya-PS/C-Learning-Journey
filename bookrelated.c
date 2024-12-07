@@ -84,3 +84,14 @@ int largest_value(int *array,int size){
     }
     return largest;
 }
+void VLA1D(int n){
+    int a[n];
+    for (int i = 0; i <n; i++){
+        a[i] = i*i; // taille du tableau créer pendant le programme (stack), libéré une fois que VLA1D se terminé
+    }
+}
+void VLA2D(int m,int n){ //variable-lenght array
+    int a[m][n], (*p)[n]; // p est un pointeur vers un tableau de n entiers
+    p=a; // a = a[0][0], donc p->a[0] #première ligne, a[1] = ligne 1 etc...
+    // il y a (a[0]...a[n-1]) car il y a n colonnes, donc p pointe vers une ligne de n valeurs (cad nb colonnes)
+}

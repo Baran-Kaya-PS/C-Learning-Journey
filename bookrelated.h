@@ -21,3 +21,5 @@ void pay_amount(int dollars,int *twenties,int *tens,int *five,int *ones);
 //CHAPTER 12
 void reverse(); // read 10 numbers then write the number in reverse order
 int largest_value(int *array,int size);
+void VLA1D(int n);
+void VLA2D(int m,int n);
