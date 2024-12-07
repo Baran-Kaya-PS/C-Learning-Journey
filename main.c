@@ -2,7 +2,8 @@
 #include <math.h>
 #include "bookrelated.h"
 #include "arraygeneration.h"
-
+#define ROWS 4
+#define COLS 4
 int main() {
     // CHAPTER 11 POINTERS
     int a = 42;
@@ -76,6 +77,14 @@ int main() {
 
     ///////////////////////////////////////////////////////////////////////////////////
     //CHAPTER 12 POINTERS AND ARRAYS
-    reverse();
+//    reverse(); //fonctionne
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    printf("\n\n\n");
+    int matrix[ROWS][COLS]; // Pointeur vers matrix[0][0], équivalent à *p = matrix[0][0]
+    generateIntMatrix(ROWS,COLS,matrix);
+    printIntMatrix(ROWS,COLS,matrix);
+    printf("\nthe maximum value of the matrix is %d\n",largest_value(matrix,ROWS*COLS));
     return 0;
 }
