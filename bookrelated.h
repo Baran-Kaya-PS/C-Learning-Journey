@@ -20,3 +20,4 @@ void find_two_largest(const int a[],int n,int *largest,int *second_largest);
 void pay_amount(int dollars,int *twenties,int *tens,int *five,int *ones);
 //CHAPTER 12
 void reverse(); // read 10 numbers then write the number in reverse order
+int largest_value(int *array,int size);

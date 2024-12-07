@@ -66,7 +66,7 @@ void pay_amount(int dollars,int *twenties,int *tens,int *five,int *ones){
     *ones = dollars;
 }
 //CHAPTER 12 POINTERS AND ARRAYS
-void reverse(){
+void reverse(){ // utilisation des pointeurs pour itérer dans le tableau
     int a[9],*p;
     for (p = a ; p < a+9; p++){
         printf("\nEnter a number : ");
@@ -76,4 +76,11 @@ void reverse(){
     for (p = a+8; p >= a;p--){
         printf(" %d",*p);
     }
+}
+int largest_value(int *array,int size){
+    int largest = array[0];
+    for (int i = 1; i < size;i++){
+        if (array[i] > largest) largest = array[i];
+    }
+    return largest;
 }
