@@ -4,7 +4,7 @@
 #include "arraygeneration.h"
 
 int main() {
-
+    // CHAPTER 11 POINTERS
     int a = 42;
     increment2(a);
     printf("Valeur de a : %d\n", a); // Affiche 42
@@ -72,5 +72,10 @@ int main() {
     int tw,te,fi,on;
     pay_amount(199,&tw,&te,&fi,&on);
     printf("to miminise 199 dolars into money bill you have\t\t %d 20$, %d 10$, %d 5$, %d 1$",tw,te,fi,on);
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    //CHAPTER 12 POINTERS AND ARRAYS
+    reverse();
     return 0;
 }
