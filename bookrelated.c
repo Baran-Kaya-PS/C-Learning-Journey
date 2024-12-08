@@ -44,14 +44,14 @@ void swap(int *i, int*j){
     *j = temp;
 }
 void find_two_largest(const int a[], int n, int *largest, int *second_largest){
-    int i;
+    int *i;
     *largest = a[0];
     *second_largest = a[1];
-    for (i = 2; i < n;i++){
+    for (i = a+2; i < a+n;i++){
         if (*largest > *second_largest){
-            if (*second_largest < a[i]) *second_largest = a[i];
+            if (*second_largest < *i) *second_largest = *i;
         } else {
-            if (*largest < a[i]) *largest = a[i];
+            if (*largest < *i) *largest = *i;
         }
         if (*largest < *second_largest) swap(largest,second_largest);
     }
