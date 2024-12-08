@@ -26,3 +26,4 @@ int largest_value(int *array,int size);
 void VLA1D(int n);
 void VLA2D(int m,int n);
 bool search(const int *,int n, int key);
+void store_zeros(int *,int n);
