@@ -11,3 +11,4 @@ void sortArray(int array[],int size);
 void generateDoubleArray(double array[],int size);
 void generateIntMatrix(int rows, int cols, int array[rows][cols]);
 void printIntMatrix(int rows, int cols, int array[rows][cols]);
+void printIntArray(const int *array, int size);

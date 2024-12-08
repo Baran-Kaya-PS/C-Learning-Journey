@@ -45,3 +45,12 @@ void sortArray(int array[], int size){ // tri à bulle
         }
     }
 }
+void printIntArray(const int *array, int size){
+    int *p;
+    p = array;
+    printf("%d",*p);
+    for (p =array+1;p< array+size;p++){
+        printf("\t%d",*p);
+    }
+    printf("\n");
+}
