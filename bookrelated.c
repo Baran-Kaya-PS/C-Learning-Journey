@@ -94,4 +94,13 @@ void VLA2D(int m,int n){ //variable-lenght array
     int a[m][n], (*p)[n]; // p est un pointeur vers un tableau de n entiers
     p=a; // a = a[0][0], donc p->a[0] #première ligne, a[1] = ligne 1 etc...
     // il y a (a[0]...a[n-1]) car il y a n colonnes, donc p pointe vers une ligne de n valeurs (cad nb colonnes)
+    // exemple, (*p)[2] // affiche a[0][2],
+    // si on incrément p tel que p++ alors on aura a[1], ainsi on peux afficher (*p)[2] = a[1][2]
+}
+bool search(const int *array,int n, int key){
+    int *p;
+    for (p = array; p<array+n;p++){
+        if (*p == key) return true;
+    }
+    return false;
 }

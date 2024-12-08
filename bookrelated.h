@@ -2,6 +2,8 @@
 // Created by Baran on 12/6/2024.
 //
 
+#include <stdbool.h>
+
 #ifndef MEMORY_GESTION_BOOKRELATED_H
 #define MEMORY_GESTION_BOOKRELATED_H
 #endif //MEMORY_GESTION_BOOKRELATED_H
@@ -23,3 +25,4 @@ void reverse(); // read 10 numbers then write the number in reverse order
 int largest_value(int *array,int size);
 void VLA1D(int n);
 void VLA2D(int m,int n);
+bool search(const int *,int n, int key);
