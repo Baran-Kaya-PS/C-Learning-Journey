@@ -112,5 +112,14 @@ int main() {
     printDoubleArray(array2,SIZE);
     double i_p = inner_product(array1,array2,SIZE);
     printf("\n %lf\n",i_p);
+    int array3[SIZE];
+    generateIntArray(array3,SIZE);
+    printIntArray(array3,SIZE);
+    printf("\nlargest value of a = %d\n",largest_value((int*)array3,SIZE));
+    int largest;
+    int secondlargest;
+    find_two_largest(array3,SIZE,&largest,&secondlargest);
+    printf("\nlargest value of a = %d\n, the second is %d\n",largest,secondlargest);
+
     return 0;
 }
