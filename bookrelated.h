@@ -27,3 +27,4 @@ void VLA1D(int n);
 void VLA2D(int m,int n);
 bool search(const int *,int n, int key);
 void store_zeros(int *,int n);
+double inner_product(const double *a,const double *b,int n);

@@ -109,3 +109,15 @@ void store_zeros(int *a,int n){
         *p = 0;
     }
 }
+double inner_product(const double *a,const double *b,int n){
+    double inner_product = 0;
+    double *p1,*p2;
+    p1 = a;
+    p2 = b;
+    while (p1 < a+n){
+        inner_product += (*p1) * (*p2);
+        p1++;
+        p2++;
+    }
+    return inner_product;
+}
