@@ -95,5 +95,7 @@ int main() {
     bool array_have_3 = search(array,SIZE,3);
     printf("%d\n",array_have_3);
     printIntArray(array,SIZE);
+    store_zeros(array,SIZE);
+    printIntArray(array,SIZE);
     return 0;
 }
