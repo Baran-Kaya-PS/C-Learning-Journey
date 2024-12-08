@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #include "bookrelated.h"
 #include "arraygeneration.h"
+#include "time.h"
 #define ROWS 4
 #define COLS 4
 int main() {
+    srand(time(NULL));
 //    // CHAPTER 11 POINTERS
 //    int a = 42;
 //    increment2(a);
@@ -81,21 +84,33 @@ int main() {
 //    ///////////////////////////////////////////////////////////////////////////////////
 //
 //    ///////////////////////////////////////////////////////////////////////////////////
-    printf("\n\n\n");
-    int matrix[ROWS][COLS]; // Pointeur vers matrix[0][0], équivalent à *p = matrix[0][0]
-    generateIntMatrix(ROWS,COLS,matrix);
-    printIntMatrix(ROWS,COLS,matrix);
-    printf("\nthe maximum value of the matrix is %d\n\n\n",largest_value(*matrix,ROWS*COLS));
+//    printf("\n\n\n");
+//    int matrix[ROWS][COLS]; // Pointeur vers matrix[0][0], équivalent à *p = matrix[0][0]
+//    generateIntMatrix(ROWS,COLS,matrix);
+//    printIntMatrix(ROWS,COLS,matrix);
+//    printf("\nthe maximum value of the matrix is %d\n\n\n",largest_value(*matrix,ROWS*COLS));
     ///////////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////////////////////
-    int array[SIZE];
-    generateIntArray(array,SIZE);
-    array[SIZE-1] = 3;
-    bool array_have_3 = search(array,SIZE,3);
-    printf("%d\n",array_have_3);
-    printIntArray(array,SIZE);
-    store_zeros(array,SIZE);
-    printIntArray(array,SIZE);
+//    int array[SIZE];
+//    generateIntArray(array,SIZE);
+//    array[SIZE-1] = 3;
+//    bool array_have_3 = search(array,SIZE,3);
+//    printf("%d\n",array_have_3);
+//    printIntArray(array,SIZE);
+//    store_zeros(array,SIZE);
+//    printIntArray(array,SIZE);
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    double array1[SIZE];
+    double array2[SIZE];
+    generateDoubleArray(array1,SIZE);
+    generateDoubleArray(array2,SIZE);
+    printDoubleArray(array1,SIZE);
+    printf("\n");
+    printDoubleArray(array2,SIZE);
+    double i_p = inner_product(array1,array2,SIZE);
+    printf("\n %lf\n",i_p);
     return 0;
 }
