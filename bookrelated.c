@@ -79,8 +79,8 @@ void reverse(){ // utilisation des pointeurs pour itérer dans le tableau
 }
 int largest_value(int *array,int size){
     int largest = array[0];
-    for (int i = 1; i < size;i++){
-        if (array[i] > largest) largest = array[i];
+    for (int *i = array+1; i < array+size;i++){
+        if (*i > largest) largest = *i;
     }
     return largest;
 }
