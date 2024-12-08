@@ -6,19 +6,16 @@
 #include <time.h>
 #include "arraygeneration.h"
 void generateIntArray(int array[],int size){
-    srand(time(NULL));
     for (int i = 0; i < size;i++){
         array[i] = rand() % 100;
     }
 }
 void generateDoubleArray(double array[],int size){
-    srand(time(NULL));
     for (int i = 0; i < size;i++){
         array[i] = (rand() % 100)+(rand()%10)*0.1+(rand()%10)*0.01;
     }
 }
 void generateIntMatrix(int rows, int cols, int array[rows][cols]){
-    srand(time(NULL));
     for (int i = 0; i < rows;i++){
         for (int j = 0; j < cols;j++) {
             array[i][j] = rand() % 100;
@@ -51,6 +48,15 @@ void printIntArray(const int *array, int size){
     printf("%d",*p);
     for (p =array+1;p< array+size;p++){
         printf("\t%d",*p);
+    }
+    printf("\n");
+}
+void printDoubleArray(const double *array, int size){
+    double *p;
+    p = array;
+    printf("%lf",*p);
+    for (p =array+1;p< array+size;p++){
+        printf("\t%lf",*p);
     }
     printf("\n");
 }
