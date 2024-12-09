@@ -123,12 +123,18 @@ int main() {
     ///////////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////////////////////
-    char c[SIZE] = {"radar"};
-    char t[SIZE];
-    reverseChar(c,t,SIZE);
-    printCharArray(c,SIZE);
-    printCharArray(t,SIZE);
-    bool iP = isPalindrome(c,SIZE);
-    printf("%d",iP);
+//    char c[SIZE] = {"radar"};
+//    char t[SIZE];
+//    reverseChar(c,t,SIZE);
+//    printCharArray(c,SIZE);
+//    printCharArray(t,SIZE);
+//    bool iP = isPalindrome(c,SIZE);
+//    printf("%d\n",iP);
+    int arr[SIZE];
+    generateIntArray(arr,SIZE);
+    printIntArray(arr,SIZE);
+    quickSort(arr,0,SIZE-1);
+    printIntArray(arr,SIZE);
     return 0;
+
 }
