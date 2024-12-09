@@ -123,10 +123,12 @@ int main() {
     ///////////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////////////////////
-    char c[SIZE] = {'A','B','C','D','E'};
+    char c[SIZE] = {"radar"};
     char t[SIZE];
     reverseChar(c,t,SIZE);
     printCharArray(c,SIZE);
     printCharArray(t,SIZE);
+    bool iP = isPalindrome(c,SIZE);
+    printf("%d",iP);
     return 0;
 }
