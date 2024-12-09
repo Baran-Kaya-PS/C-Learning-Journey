@@ -30,3 +30,4 @@ void store_zeros(int *,int n);
 double inner_product(const double *a,const double *b,int n);
 char* reverseChar(const char *c,char *t, int size);
 bool isPalindrome(const char *c,int SIZE);
+char digit_to_hex_char(int digit);

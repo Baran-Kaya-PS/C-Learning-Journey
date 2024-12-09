@@ -145,3 +145,6 @@ bool isPalindrome(const char *c,int size){
     }
     return true;
 }
+char digit_to_hex_char(int digit){
+    return "0123456789ABCDEF"[digit%16]; // mod 16 pour éviter les erreurs car 0123... va de 0 a 15 caractères
+} // retourne la valeur en hexadécimale de digit
