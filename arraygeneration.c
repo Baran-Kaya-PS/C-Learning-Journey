@@ -60,3 +60,12 @@ void printDoubleArray(const double *array, int size){
     }
     printf("\n");
 }
+void printCharArray(const char *c, int size){
+    char *p;
+    p = c;
+    printf("%c",*p);
+    for (p = c+1;p<c+size;p++){
+        printf("\t%c",*p);
+    }
+    printf("\n");
+}
