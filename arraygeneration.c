@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include "arraygeneration.h"
-void generateIntArray(int array[],int size){
+
+
+void generateIntArray(int array[], int size){
     for (int i = 0; i < size;i++){
         array[i] = rand() % 100;
     }
@@ -31,7 +33,7 @@ void printIntMatrix(int rows, int cols, int array[rows][cols]) {
     }
 }
 
-void sortArray(int array[], int size){ // tri à bulle
+void bubbleSort(int *array, int size){ // tri à bulle
     for (int i = 0; i < size; i++){
         for (int j = 0; j < size-i;j++){
             if (array[j] > array[j+1]){
@@ -68,4 +70,30 @@ void printCharArray(const char *c, int size){
         printf("\t%c",*p);
     }
     printf("\n");
+}
+void quickSort(int *array,int p, int r){
+    if (p < r){
+        int q = partition(array,p,r);
+        quickSort(array,p,(q-1));
+        quickSort(array,(q+1),r);
+    }
+    return;
+}
+
+int partition(int *array, int p, int r) {
+    int x = array[r];
+    int i = p-1;
+    for (int j = p; j < r;j++){
+        if (array[j] <= x){
+            i++;
+            exchange(array,i,j);
+        }
+    }
+    exchange(array,i+1,r);
+    return i+1;
+}
+void exchange(int *array, int a, int b){
+    int temp = array[a];
+    array[a] = array[b];
+    array[b] = temp;
 }
