@@ -137,3 +137,11 @@ char* reverseChar(const char *c,char *t, int size){
     }
     return t;
 }
+bool isPalindrome(const char *c,int size){
+    char t[size];
+    reverseChar(c,t,size);
+    for (int i = 0; i < size; i++){
+        if (c[i] != t[i]) return false;
+    }
+    return true;
+}

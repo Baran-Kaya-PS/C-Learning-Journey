@@ -29,3 +29,4 @@ bool search(const int *,int n, int key);
 void store_zeros(int *,int n);
 double inner_product(const double *a,const double *b,int n);
 char* reverseChar(const char *c,char *t, int size);
+bool isPalindrome(const char *c,int SIZE);
