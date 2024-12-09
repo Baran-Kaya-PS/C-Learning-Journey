@@ -124,7 +124,9 @@ int main() {
 
     ///////////////////////////////////////////////////////////////////////////////////
     char c[SIZE] = {'A','B','C','D','E'};
-    reverseChar(c,SIZE);
+    char t[SIZE];
+    reverseChar(c,t,SIZE);
     printCharArray(c,SIZE);
+    printCharArray(t,SIZE);
     return 0;
 }
