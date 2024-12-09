@@ -28,4 +28,4 @@ void VLA2D(int m,int n);
 bool search(const int *,int n, int key);
 void store_zeros(int *,int n);
 double inner_product(const double *a,const double *b,int n);
-void reverseChar(char *p, int size);
+char* reverseChar(const char *c,char *t, int size);

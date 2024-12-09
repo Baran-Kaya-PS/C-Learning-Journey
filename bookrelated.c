@@ -121,7 +121,7 @@ double inner_product(const double *a,const double *b,int n){
     }
     return inner_product;
 }
-void reverseChar(char *c, int size){
+void reverseOriginalChar(char *c, int size){
     int i,j;
     char t;
     for (i = 0, j = size-1; i < j; i++, j--){
@@ -129,4 +129,11 @@ void reverseChar(char *c, int size){
         c[i] = c[j];
         c[j] = t;
     }
+}
+char* reverseChar(const char *c,char *t, int size){
+    int i;
+    for (i = 0; i < size;i++){
+        t[i] = c[(size-1)-i];
+    }
+    return t;
 }
