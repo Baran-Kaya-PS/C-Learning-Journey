@@ -103,23 +103,28 @@ int main() {
     ///////////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////////////////////
-    double array1[SIZE];
-    double array2[SIZE];
-    generateDoubleArray(array1,SIZE);
-    generateDoubleArray(array2,SIZE);
-    printDoubleArray(array1,SIZE);
-    printf("\n");
-    printDoubleArray(array2,SIZE);
-    double i_p = inner_product(array1,array2,SIZE);
-    printf("\n %lf\n",i_p);
-    int array3[SIZE];
-    generateIntArray(array3,SIZE);
-    printIntArray(array3,SIZE);
-    printf("\nlargest value of a = %d\n",largest_value((int*)array3,SIZE));
-    int largest;
-    int secondlargest;
-    find_two_largest(array3,SIZE,&largest,&secondlargest);
-    printf("\nlargest value of a = %d\n, the second is %d\n",largest,secondlargest);
+//    double array1[SIZE];
+//    double array2[SIZE];
+//    generateDoubleArray(array1,SIZE);
+//    generateDoubleArray(array2,SIZE);
+//    printDoubleArray(array1,SIZE);
+//    printf("\n");
+//    printDoubleArray(array2,SIZE);
+//    double i_p = inner_product(array1,array2,SIZE);
+//    printf("\n %lf\n",i_p);
+//    int array3[SIZE];
+//    generateIntArray(array3,SIZE);
+//    printIntArray(array3,SIZE);
+//    printf("\nlargest value of a = %d\n",largest_value((int*)array3,SIZE));
+//    int largest;
+//    int secondlargest;
+//    find_two_largest(array3,SIZE,&largest,&secondlargest);
+//    printf("\nlargest value of a = %d\n, the second is %d\n",largest,secondlargest);
+    ///////////////////////////////////////////////////////////////////////////////////
 
+    ///////////////////////////////////////////////////////////////////////////////////
+    char c[SIZE] = {'A','B','C','D','E'};
+    reverseChar(c,SIZE);
+    printCharArray(c,SIZE);
     return 0;
 }
