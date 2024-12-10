@@ -33,3 +33,4 @@ bool isPalindrome(const char *c,int SIZE);
 char digit_to_hex_char(int digit);
 int read_line(char str[], int n);
 int count_spaces(const char s[]);
+int count_spaces2(const char *s);

@@ -150,7 +150,7 @@ char digit_to_hex_char(int digit){
 } // retourne la valeur en hexadécimale de digit
 int read_line(char str[], int n){
     int ch, i = 0;
-    while ((ch = getchar()) != '\n')// ch initialement un int; getchar() retourne le caractère associé a la valeur de ch; si ch != saut de ligne on continue. readline quoi
+    while ((ch = getchar()) != '\n')// getchar() récupère l'entrée utilisateur ; si ch != saut de ligne on continue. readline quoi
         if (i < n) // on itère tant qu'il n y a pas de saut de ligne
             str[i++] = ch;
     str[i] = '\0'; // le dernier str devient '\0' pour indiquer la fin du string
@@ -160,6 +160,13 @@ int count_spaces(const char s[]){
     int count = 0, i;
     for (i = 0; s[i] != '\0';i++){ // tant que l'on atteint pas la fin du str on continue "s[i] != '\0'"; for (expr1;expr2;expr3){}
         if (s[i] == ' ') count++;
+    }
+    return count;
+}
+int count_spaces2(const char *s){ // s va être une copie de la variable en entrée
+    int count = 0;
+    for (;*s != '\0';s++){
+        if (*s == ' ') count++;
     }
     return count;
 }
