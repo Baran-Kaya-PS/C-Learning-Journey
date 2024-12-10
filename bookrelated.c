@@ -148,3 +148,18 @@ bool isPalindrome(const char *c,int size){
 char digit_to_hex_char(int digit){
     return "0123456789ABCDEF"[digit%16]; // mod 16 pour éviter les erreurs car 0123... va de 0 a 15 caractères
 } // retourne la valeur en hexadécimale de digit
+int read_line(char str[], int n){
+    int ch, i = 0;
+    while ((ch = getchar()) != '\n')// ch initialement un int; getchar() retourne le caractère associé a la valeur de ch; si ch != saut de ligne on continue. readline quoi
+        if (i < n) // on itère tant qu'il n y a pas de saut de ligne
+            str[i++] = ch;
+    str[i] = '\0'; // le dernier str devient '\0' pour indiquer la fin du string
+    return i;
+}
+int count_spaces(const char s[]){
+    int count = 0, i;
+    for (i = 0; s[i] != '\0';i++){ // tant que l'on atteint pas la fin du str on continue "s[i] != '\0'"; for (expr1;expr2;expr3){}
+        if (s[i] == ' ') count++;
+    }
+    return count;
+}
