@@ -146,15 +146,17 @@ bool isPalindrome(const char *c,int size){
     return true;
 }
 char digit_to_hex_char(int digit){
-    return "0123456789ABCDEF"[digit%16]; // mod 16 pour éviter les erreurs car 0123... va de 0 a 15 caractères
-} // retourne la valeur en hexadécimale de digit
-int read_line(char str[], int n){
+    return "0123456789ABCDEF"[digit%16]; // mod 16 pour eviter les erreurs car 0123... va de 0 a 15 caractères
+} // retourne la valeur en hexadecimale de digit
+int read_line(char str[], int n) {
     int ch, i = 0;
-    while ((ch = getchar()) != '\n')// getchar() récupère l'entrée utilisateur ; si ch != saut de ligne on continue. readline quoi
-        if (i < n) // on itère tant qu'il n y a pas de saut de ligne
+    printf("[DEBUG] read_line: Lecture du message...\n");
+    while ((ch = getchar()) != '\n' && ch != EOF) // Recupère un caractère jusqu'à '\n'
+        if (i < n - 1) // Assure qu'on ne depasse pas la taille maximale
             str[i++] = ch;
-    str[i] = '\0'; // le dernier str devient '\0' pour indiquer la fin du string
-    return i;
+    str[i] = '\0'; // Ajoute le caractère nul pour terminer la chaîne
+    printf("[DEBUG] read_line: Message recupere: '%s'\n", str);
+    return i; // Retourne la longueur de la chaîne
 }
 int count_spaces(const char s[]){
     int count = 0, i;
@@ -163,7 +165,7 @@ int count_spaces(const char s[]){
     }
     return count;
 }
-int count_spaces2(const char *s){ // s va être une copie de la variable en entrée
+int count_spaces2(const char *s){ // s va être une copie de la variable en entree
     int count = 0;
     for (;*s != '\0';s++){
         if (*s == ' ') count++;
