@@ -178,13 +178,8 @@ size_t strlen(const char *s){
 }
 char *strcat(char *s1, const char *s2){ //concat
     char *p = s1;
-    while (*p != '\0')
-        *p++;
-    while(*s2 != '\0'){
-        *p = *s2;
+    while (*p)
         p++;
-        s2++;
-    }
-    *p = '\0';
+    while (*p++ = *s2++); // tant que (*p = *s2) != '\0'; p++, s++
     return s1;
 }
