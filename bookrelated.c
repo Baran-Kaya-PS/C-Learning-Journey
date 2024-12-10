@@ -1,7 +1,6 @@
 //
 // Created by Baran on 12/6/2024.
 #include "bookrelated.h"
-#include <stdio.h>
 // CHAPTER 11 POINTERS
 void increment(int *p) { // p est un pointeur
     *p = *p + 1; // Modifie la valeur de la variable pointée
@@ -171,4 +170,9 @@ int count_spaces2(const char *s){ // s va être une copie de la variable en entr
         if (*s == ' ') count++;
     }
     return count;
+}
+size_t strlen(const char *s){
+    size_t n;
+    for (n = 0;*s != '\0';n++);
+    return n;
 }

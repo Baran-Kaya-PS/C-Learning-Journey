@@ -3,7 +3,7 @@
 //
 
 #include <stdbool.h>
-
+#include <stdio.h>
 #ifndef MEMORY_GESTION_BOOKRELATED_H
 #define MEMORY_GESTION_BOOKRELATED_H
 #endif //MEMORY_GESTION_BOOKRELATED_H
@@ -34,3 +34,4 @@ char digit_to_hex_char(int digit);
 int read_line(char str[], int n);
 int count_spaces(const char s[]);
 int count_spaces2(const char *s);
+size_t strlen(const char *s);
