@@ -4,6 +4,9 @@
 #include "bookrelated.h"
 #include "arraygeneration.h"
 #include "time.h"
+#include <string.h>
+#define MAX_REMIND 50
+#define MSG_LEN 50
 #define ROWS 4
 #define COLS 4
 int main() {
@@ -85,7 +88,7 @@ int main() {
 //
 //    ///////////////////////////////////////////////////////////////////////////////////
 //    printf("\n\n\n");
-//    int matrix[ROWS][COLS]; // Pointeur vers matrix[0][0], équivalent à *p = matrix[0][0]
+//    int matrix[ROWS][COLS]; // Pointeur vers matrix[0][0], équivalent a *p = matrix[0][0]
 //    generateIntMatrix(ROWS,COLS,matrix);
 //    printIntMatrix(ROWS,COLS,matrix);
 //    printf("\nthe maximum value of the matrix is %d\n\n\n",largest_value(*matrix,ROWS*COLS));
@@ -130,11 +133,103 @@ int main() {
 //    printCharArray(t,SIZE);
 //    bool iP = isPalindrome(c,SIZE);
 //    printf("%d\n",iP);
-    int arr[SIZE];
-    generateIntArray(arr,SIZE);
-    printIntArray(arr,SIZE);
-    quickSort(arr,0,SIZE-1);
-    printIntArray(arr,SIZE);
-    return 0;
+//    int arr[SIZE];
+//    generateIntArray(arr,SIZE);
+//    printIntArray(arr,SIZE);
+//    quickSort(arr,0,SIZE-1);
+//    printIntArray(arr,SIZE);
+    ///////////////////////////////////////////////////////////////////////////////////
 
+    ///////////////////////////////////////////////////////////////////////////////////
+//    char *str[50];
+//    read_line(str,50); // stoque l'entrée utilisateur dans str
+//    printf("\naffichage du mot : %s\n",str);
+//    printf("%d\n",count_spaces2(str)); // print 4
+//    printf("%d\n",count_spaces2(str)); // print 4; it means that *s in count space copy str and do not modify it
+    ///////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////
+//    char str1[SIZE];
+//    strcpy(str1,"test");
+//    printf("%s\n",str1);
+//    char str2[SIZE];
+//    strncpy(str2,str1,sizeof(str1)-1);
+//    printf("%s\n",str2);
+//    str1[sizeof(str1)-1] = '\0';
+//    str1[sizeof(str1)-2] = 'z'; // manipulation avec sizeof pour l'index
+//    printf("%s\n",str1);
+//    int len;
+//    len = strlen(str1);
+//    printf("the len of str1 is %d\n",len);
+//    strcpy(str1,"1234567891");
+//    len = strlen(str1);
+//    printf("%s\n",str1);
+//    printf("the len of str1 is %d\n",len);
+//    char *p;
+//    p = strcat(str1,str2);
+//    printf("%s\n",p);
+//    strcpy(str1,str2);
+    ///////////////////////////////////////////////////////////////////////////////////
+    /// PRINTS A ONE MONTH REMINDER LIST
+    /// we got a dictionnary (not a real one) with days and reminder, at the end of the program, the arrays are sorted by day by shifting on the right
+    /// Btw reminders[I] = the string, Reminders[I][J] = the value of the index j of the string at i
+    ///////////////////////////////////////////////////////////////////////////////////
+//    char reminders[MAX_REMIND][MSG_LEN + 3]; // Tableau de rappels
+//    char day_str[3], msg_str[MSG_LEN + 1];   // Stockage du jour et du message
+//    int day, i, j, num_remind = 0;
+//
+//    for (;;) {
+//        if (num_remind == MAX_REMIND) {
+//            printf("-- No space left --\n");
+//            break;
+//        }
+//
+//        printf("\nEnter day and reminder: ");
+//        scanf("%2d", &day); // Lit un entier (le jour)
+//        printf("[DEBUG] scanf: Jour lu: %d\n", day);
+//
+//        if (day == 0) {
+//            printf("\n[DEBUG] Fin du programme.\n");
+//            break;
+//        }
+//
+//        sprintf(day_str, "%2d", day); // Formatage du jour dans une chaîne
+//        printf("[DEBUG] sprintf: Jour formate (day_str): '%s'\n", day_str);
+//
+//        printf("Enter reminder message: ");
+//        read_line(msg_str, MSG_LEN); // Lit le message associe au jour dans le buffer
+//
+//        // Recherche de l'emplacement où inserer le rappel
+//        for (i = 0; i < num_remind; i++) {
+//            printf("[DEBUG] Comparaison: '%s' vs '%s'\n", day_str, reminders[i]);
+//            if (strcmp(day_str, reminders[i]) < 0) {
+//                printf("[DEBUG] '%s' doit être insere avant '%s'\n", day_str, reminders[i]);
+//                break;
+//            }
+//        }
+//
+//        // Decalage des rappels existants pour inserer le nouveau
+//        for (j = num_remind; j > i; j--) {
+//            strcpy(reminders[j], reminders[j - 1]);
+//            printf("[DEBUG] Decalage: reminders[%d] = reminders[%d]\n", j, j - 1);
+//        }
+//
+//        // Insere le nouveau rappel
+//        strcpy(reminders[i], day_str);
+//        strcat(reminders[i], " "); // Ajoute un espace entre le jour et le message
+//        strcat(reminders[i], msg_str);
+//        printf("[DEBUG] Nouveau rappel insere: '%s'\n", reminders[i]);
+//
+//        num_remind++; // Incremente le nombre de rappels
+//        printf("[DEBUG] Nombre de rappels: %d\n", num_remind);
+//    }
+//
+//    // Affichage des rappels tries
+//    printf("\nDay Reminder\n");
+//    for (i = 0; i < num_remind; i++) {
+//        printf("%s\n", reminders[i]);
+//        printf("[DEBUG] Reminder %d: '%s'\n", i + 1, reminders[i]);
+//    }
+
+    return 0;
 }
