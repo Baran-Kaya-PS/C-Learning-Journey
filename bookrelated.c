@@ -176,3 +176,15 @@ size_t strlen(const char *s){
     for (n = 0;*s != '\0';n++);
     return n;
 }
+char *strcat(char *s1, const char *s2){ //concat
+    char *p = s1;
+    while (*p != '\0')
+        *p++;
+    while(*s2 != '\0'){
+        *p = *s2;
+        p++;
+        s2++;
+    }
+    *p = '\0';
+    return s1;
+}
