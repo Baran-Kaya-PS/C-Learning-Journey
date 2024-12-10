@@ -71,26 +71,26 @@ void printCharArray(const char *c, int size){
     }
     printf("\n");
 }
-void quickSort(int *array,int p, int r){
-    if (p < r){
-        int q = partition(array,p,r);
-        quickSort(array,p,(q-1));
-        quickSort(array,(q+1),r);
+void quickSort(int *array,int start, int end){
+    if (start < end){
+        int q = partition(array,start,end);
+        quickSort(array,start,(q-1));
+        quickSort(array,(q+1),end);
     }
     return;
 }
 
-int partition(int *array, int p, int r) {
-    int x = array[r];
-    int i = p-1;
-    for (int j = p; j < r;j++){
-        if (array[j] <= x){
+int partition(int *array, int start, int end) {
+    int x = array[end]; // valeur du pivot
+    int i = start-1;
+    for (int j = start; j < end;j++){ // on commence par trier
+        if (array[j] <= x){ // si une valeur est inférieur au pivot
             i++;
-            exchange(array,i,j);
-        }
-    }
-    exchange(array,i+1,r);
-    return i+1;
+            exchange(array,i,j); // on échange a[i],a[j]; à la fin on échange a[i] avec le pivot
+        } // on itère sur tout le tableau pour tout simplement mettre les valeurs supérieur à droite
+    } // cette partition va nous permettre d'éjecter les valeurs plus grandes que le pivot sur la partie gauche du tableau
+    exchange(array,i+1,end);
+    return i+1; //index après partition du pivot
 }
 void exchange(int *array, int a, int b){
     int temp = array[a];

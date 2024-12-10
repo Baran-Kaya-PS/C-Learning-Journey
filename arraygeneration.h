@@ -15,6 +15,6 @@ void printIntArray(const int *array, int size);
 double inner_product(const double *a,const double *b,int n);
 void printDoubleArray(const double *array, int size);
 void printCharArray(const char *c, int size);
-void quickSort(int *array,int p, int r);
+void quickSort(int *array,int start, int end);
 int partition(int *array, int p, int r);
 void exchange(int *array, int a, int b);
