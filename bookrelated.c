@@ -1,6 +1,7 @@
 //
 // Created by Baran on 12/6/2024.
 #include "bookrelated.h"
+#include <ctype.h>
 // CHAPTER 11 POINTERS
 void increment(int *p) { // p est un pointeur
     *p = *p + 1; // Modifie la valeur de la variable pointée
@@ -145,17 +146,29 @@ bool isPalindrome(const char *c,int size){
     return true;
 }
 char digit_to_hex_char(int digit){
-    return "0123456789ABCDEF"[digit%16]; // mod 16 pour eviter les erreurs car 0123... va de 0 a 15 caractères
-} // retourne la valeur en hexadecimale de digit
+    return "0123456789ABCDEF"[digit%16];
+}
 int read_line(char str[], int n) {
-    int ch, i = 0;
-    printf("[DEBUG] read_line: Lecture du message...\n");
-    while ((ch = getchar()) != '\n' && ch != EOF) // Recupère un caractère jusqu'à '\n'
-        if (i < n - 1) // Assure qu'on ne depasse pas la taille maximale
+    int ch, i = 0,start = 0;
+    while ((ch = getchar()) != EOF) {
+        printf("[DEBUG] Caractere lu : '%c' (code ASCII : %d)\n", ch, ch);
+        if (!start && ch == ' ') continue; // tant que start est égal à 0 et que ch = ' ', on recommence la loop
+        start = 1;
+        if (ch == '\n') {
+            printf("[DEBUG] Saut de ligne détecté\n");
+            if (i < n - 1) {
+                str[i++] = '\n';
+            }
+            break;
+        }
+        if (i < n - 1) {
             str[i++] = ch;
-    str[i] = '\0'; // Ajoute le caractère nul pour terminer la chaîne
-    printf("[DEBUG] read_line: Message recupere: '%s'\n", str);
-    return i; // Retourne la longueur de la chaîne
+        } else {
+            printf("[DEBUT] Caractere ignore");
+        }
+    }
+    str[i] = '\0';
+    return i;
 }
 int count_spaces(const char s[]){
     int count = 0, i;
@@ -173,7 +186,7 @@ int count_spaces2(const char *s){ // s va être une copie de la variable en entr
 }
 size_t strlen(const char *s){
     size_t n;
-    for (n = 0;*s != '\0';n++);
+    for (n = 0;*s != '\0';n++,s++);
     return n;
 }
 char *strcat(char *s1, const char *s2){ //concat
