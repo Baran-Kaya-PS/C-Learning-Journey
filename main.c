@@ -9,8 +9,9 @@
 #define MSG_LEN 50
 #define ROWS 4
 #define COLS 4
-int main() {
-    srand(time(NULL));
+int main() { // argc = argument count, argv = argument vector
+//    printf("[DEBUG] Avant la boucle principale\n");
+//    srand(time(NULL));
 //    // CHAPTER 11 POINTERS
 //    int a = 42;
 //    increment2(a);
@@ -37,7 +38,7 @@ int main() {
 //    ///////////////////////////////////////////////////////////////////////////////////
 //    int b[SIZE];
 //    generateIntArray(b,SIZE);
-//    sortArray(b,SIZE);
+//    bubbleSort(b,SIZE);
 //    printf("b[1] = %d",b[0]);
 //    for (i = 1; i < SIZE; i++){
 //        printf("\tb[%d] = %d",i+1,b[i]);
@@ -48,13 +49,13 @@ int main() {
 //    ///////////////////////////////////////////////////////////////////////////////////
 //    double avg;
 //    double sum;
-//    double c[SIZE];
-//    generateDoubleArray(c,SIZE);
-//    printf("c[1] = %f",c[0]);
+//    double cc[SIZE];
+//    generateDoubleArray(cc,SIZE);
+//    printf("c[1] = %f",cc[0]);
 //    for (i = 1; i < SIZE; i++){
-//        printf("\tc[%d] = %f",i+1,c[i]);
+//        printf("\tc[%d] = %f",i+1,cc[i]);
 //    }
-//    avg_sum( c, SIZE, (double *) &avg, &sum);
+//    avg_sum( cc, SIZE, (double *) &avg, &sum);
 //    printf("the average of c is %lf\t the sum is %lf\n",avg,sum);
 //    ///////////////////////////////////////////////////////////////////////////////////
 //
@@ -92,9 +93,9 @@ int main() {
 //    generateIntMatrix(ROWS,COLS,matrix);
 //    printIntMatrix(ROWS,COLS,matrix);
 //    printf("\nthe maximum value of the matrix is %d\n\n\n",largest_value(*matrix,ROWS*COLS));
-    ///////////////////////////////////////////////////////////////////////////////////
-
-    ///////////////////////////////////////////////////////////////////////////////////
+//    /////////////////////////////////////////////////////////////////////////////////
+//
+//    /////////////////////////////////////////////////////////////////////////////////
 //    int array[SIZE];
 //    generateIntArray(array,SIZE);
 //    array[SIZE-1] = 3;
@@ -103,9 +104,9 @@ int main() {
 //    printIntArray(array,SIZE);
 //    store_zeros(array,SIZE);
 //    printIntArray(array,SIZE);
-    ///////////////////////////////////////////////////////////////////////////////////
-
-    ///////////////////////////////////////////////////////////////////////////////////
+//    /////////////////////////////////////////////////////////////////////////////////
+//
+//    /////////////////////////////////////////////////////////////////////////////////
 //    double array1[SIZE];
 //    double array2[SIZE];
 //    generateDoubleArray(array1,SIZE);
@@ -119,13 +120,12 @@ int main() {
 //    generateIntArray(array3,SIZE);
 //    printIntArray(array3,SIZE);
 //    printf("\nlargest value of a = %d\n",largest_value((int*)array3,SIZE));
-//    int largest;
 //    int secondlargest;
 //    find_two_largest(array3,SIZE,&largest,&secondlargest);
 //    printf("\nlargest value of a = %d\n, the second is %d\n",largest,secondlargest);
-    ///////////////////////////////////////////////////////////////////////////////////
-
-    ///////////////////////////////////////////////////////////////////////////////////
+//    /////////////////////////////////////////////////////////////////////////////////
+//
+//    /////////////////////////////////////////////////////////////////////////////////
 //    char c[SIZE] = {"radar"};
 //    char t[SIZE];
 //    reverseChar(c,t,SIZE);
@@ -138,17 +138,17 @@ int main() {
 //    printIntArray(arr,SIZE);
 //    quickSort(arr,0,SIZE-1);
 //    printIntArray(arr,SIZE);
-    ///////////////////////////////////////////////////////////////////////////////////
-
-    ///////////////////////////////////////////////////////////////////////////////////
+//    /////////////////////////////////////////////////////////////////////////////////
+//
+//    /////////////////////////////////////////////////////////////////////////////////
 //    char *str[50];
 //    read_line(str,50); // stoque l'entrée utilisateur dans str
 //    printf("\naffichage du mot : %s\n",str);
 //    printf("%d\n",count_spaces2(str)); // print 4
 //    printf("%d\n",count_spaces2(str)); // print 4; it means that *s in count space copy str and do not modify it
-    ///////////////////////////////////////////////////////////////////////////////////
-
-    ///////////////////////////////////////////////////////////////////////////////////
+//    /////////////////////////////////////////////////////////////////////////////////
+//
+//    /////////////////////////////////////////////////////////////////////////////////
 //    char str1[SIZE];
 //    strcpy(str1,"test");
 //    printf("%s\n",str1);
@@ -169,11 +169,11 @@ int main() {
 //    p = strcat(str1,str2);
 //    printf("%s\n",p);
 //    strcpy(str1,str2);
-    ///////////////////////////////////////////////////////////////////////////////////
-    /// PRINTS A ONE MONTH REMINDER LIST
-    /// we got a dictionnary (not a real one) with days and reminder, at the end of the program, the arrays are sorted by day by shifting on the right
-    /// Btw reminders[I] = the string, Reminders[I][J] = the value of the index j of the string at i
-    ///////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
+//    / PRINTS A ONE MONTH REMINDER LIST
+//    / we got a dictionnary (not a real one) with days and reminder, at the end of the program, the arrays are sorted by day by shifting on the right
+//    / Btw reminders[I] = the string, Reminders[I][J] = the value of the index j of the string at i
+    /////////////////////////////////////////////////////////////////////////////////
 //    char reminders[MAX_REMIND][MSG_LEN + 3]; // Tableau de rappels
 //    char day_str[3], msg_str[MSG_LEN + 1];   // Stockage du jour et du message
 //    int day, i, j, num_remind = 0;
@@ -230,6 +230,23 @@ int main() {
 //        printf("%s\n", reminders[i]);
 //        printf("[DEBUG] Reminder %d: '%s'\n", i + 1, reminders[i]);
 //    }
+    char s[SIZE];
+    printf("Entrez une chaine : ");
+    read_line(s, SIZE);
+
+    // Vérifie le contenu
+    printf("\nChaine complete : '%s'\n", s);
+    printf("Caracteres individuels :\n");
+    for (int i = 0; s[i] != '\0'; i++) {
+        printf("'%c' (code ASCII : %d)\n", s[i], s[i]);
+    }
+
+    printf("y a t'il eu un saut de ligne ? \n");
+    if (s[strlen(s) - 1] == '\n') {
+        printf("Oui, il y a un saut de ligne !\n");
+    } else {
+        printf("Non, il n'y a pas de saut de ligne.\n");
+    }
 
     return 0;
 }
