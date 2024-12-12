@@ -2,6 +2,8 @@
 // Created by Baran on 12/6/2024.
 #include "bookrelated.h"
 #include <ctype.h>
+#include <string.h>
+
 // CHAPTER 11 POINTERS
 void increment(int *p) { // p est un pointeur
     *p = *p + 1; // Modifie la valeur de la variable pointée
@@ -217,13 +219,22 @@ char *censor(char *c){ //replace every "foo" by "xxx"
     }
     return c;
 }
-void get_extention(const char *file_name, char *extention){
+void get_extension(const char *file_name, char *extention){
     char *p = file_name;
     while (*p != '.' && *p != '\0') p++;
+    p++;
     while (*p != '\0'){
         *extention = *p;
         extention++;
         p++;
     }
-    *(extention+1) = '\0';
+    *(extention) = '\0';
+}
+void get_extension2(const char *file_name, char *extention){
+    const char *dot = strchr(file_name,'.'); // récupère le premier pointeur qui pointe vers la chaine '.'
+    if (dot){ // si pointeur non nul
+        strcpy(extention,dot+1); // on copie dans extention toute la chaine qui reste après le point, enlever le +1 si on veux garder le . dans l'extention .txt par exemple au lieu de txt
+    } else {
+        *extention = '\0'; // si on trouve pas d'extention extention devient caractère nul.
+    }
 }

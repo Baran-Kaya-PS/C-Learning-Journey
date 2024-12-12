@@ -38,4 +38,7 @@ size_t strlen(const char *s); // can be condensed, see p297 of the book
 char *strcat(char *s1, const char *s2);
 char capitalize(char *c);
 char *censor(char *c); // replace "foo" by "xxx"
-void get_extention(const char *file_name, char *extention);
+void get_extension(const char *file_name, char *extention);
+void get_extension2(const char *file_name, char *extention);
+
+
