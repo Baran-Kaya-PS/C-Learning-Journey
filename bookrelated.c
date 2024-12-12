@@ -217,3 +217,13 @@ char *censor(char *c){ //replace every "foo" by "xxx"
     }
     return c;
 }
+void get_extention(const char *file_name, char *extention){
+    char *p = file_name;
+    while (*p != '.' && *p != '\0') p++;
+    while (*p != '\0'){
+        *extention = *p;
+        extention++;
+        p++;
+    }
+    *(extention+1) = '\0';
+}
