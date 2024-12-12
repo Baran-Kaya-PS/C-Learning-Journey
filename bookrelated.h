@@ -36,3 +36,4 @@ int count_spaces(const char s[]);
 int count_spaces2(const char *s);
 size_t strlen(const char *s); // can be condensed, see p297 of the book
 char *strcat(char *s1, const char *s2);
+char capitalize(char *c);

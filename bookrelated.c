@@ -196,3 +196,9 @@ char *strcat(char *s1, const char *s2){ //concat
     while (*p++ = *s2++); // tant que (*p = *s2) != '\0'; p++, s++
     return s1;
 }
+char capitalize(char *c){
+    if (*c >= 'a' && *c <= 'z'){ // c compris entre petit a, petit z;
+        *c -= 32;
+    }
+    return *c;
+}
