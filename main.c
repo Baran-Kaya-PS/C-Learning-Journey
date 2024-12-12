@@ -230,23 +230,24 @@ int main() { // argc = argument count, argv = argument vector
 //        printf("%s\n", reminders[i]);
 //        printf("[DEBUG] Reminder %d: '%s'\n", i + 1, reminders[i]);
 //    }
-    char s[SIZE];
-    printf("Entrez une chaine : ");
-    read_line(s, SIZE);
-
-    // Vérifie le contenu
-    printf("\nChaine complete : '%s'\n", s);
-    printf("Caracteres individuels :\n");
-    for (int i = 0; s[i] != '\0'; i++) {
-        printf("'%c' (code ASCII : %d)\n", s[i], s[i]);
-    }
-
-    printf("y a t'il eu un saut de ligne ? \n");
-    if (s[strlen(s) - 1] == '\n') {
-        printf("Oui, il y a un saut de ligne !\n");
-    } else {
-        printf("Non, il n'y a pas de saut de ligne.\n");
-    }
-
+//    char s[SIZE];
+//    printf("Entrez une chaine : ");
+//    read_line(s, SIZE);
+//
+//    // Vérifie le contenu
+//    printf("\nChaine complete : '%s'\n", s);
+//    printf("Caracteres individuels :\n");
+//    for (int i = 0; s[i] != '\0'; i++) {
+//        printf("'%c' (code ASCII : %d)\n", s[i], s[i]);
+//    }
+//
+//    printf("y a t'il eu un saut de ligne ? \n");
+//    if (s[strlen(s) - 1] == '\n') {
+//        printf("Oui, il y a un saut de ligne !\n");
+//    } else {
+//        printf("Non, il n'y a pas de saut de ligne.\n");
+//    }
+    char ch = 'b';
+    printf("Majuscule : %c\n", capitalize(&ch)); // Devrait afficher 'B'
     return 0;
 }
