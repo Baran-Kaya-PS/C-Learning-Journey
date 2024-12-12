@@ -202,3 +202,17 @@ char capitalize(char *c){
     }
     return *c;
 }
+char *censor(char *c){ //replace every "foo" by "xxx"
+    char *p1 = c, *p2 = c+1, *p3 = c+2;
+    while (*p3 != '\0'){
+        if (*p1 == 'f' && *p2 == 'o' && *p3 == 'o'){
+            *p1 = 'x';
+            *p2 = 'x';
+            *p3 = 'x';
+        }
+        p1++;
+        p2++;
+        p3++;
+    }
+    return c;
+}
