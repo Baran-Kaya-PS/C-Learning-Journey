@@ -250,7 +250,27 @@ int main() { // argc = argument count, argv = argument vector
 //    char ch = 'b';
 //    printf("Majuscule : %c\n", capitalize(&ch)); // Devrait afficher 'B'
 //    return 0;
-    char str[] = "food fool foot";
-    printf("Avant censure : %s\n", str);
-    printf("Après censure : %s\n", censor(str));
+//    char str[] = "food fool foot";
+//    printf("Avant censure : %s\n", str);
+//    printf("Après censure : %s\n", censor(str));
+    // Test 1 : Fichier avec extension classique
+    char extension[100];
+    get_extension("file.txt", extension);
+    printf("Extension de 'file.txt' : '%s'\n", extension); // Attendu : ".txt"
+
+    // Test 2 : Fichier sans extension
+    get_extension("file", extension);
+    printf("Extension de 'file' : '%s'\n", extension); // Attendu : ""
+
+    // Test 3 : Fichier avec point au début
+    get_extension(".hiddenfile", extension);
+    printf("Extension de '.hiddenfile' : '%s'\n", extension); // Attendu : ""
+
+    // Test 4 : Fichier avec plusieurs points
+    get_extension("archive.tar.gz", extension);
+    printf("Extension de 'archive.tar.gz' : '%s'\n", extension); // Attendu : ".gz"
+
+    // Test 5 : Fichier avec point final
+    get_extension("file.", extension);
+    printf("Extension de 'file.' : '%s'\n", extension); // Attendu : ""
 }
