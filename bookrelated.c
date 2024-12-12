@@ -198,7 +198,8 @@ char *strcat(char *s1, const char *s2){ //concat
 }
 char capitalize(char *c){
     if (*c >= 'a' && *c <= 'z'){ // c compris entre petit a, petit z;
-        *c -= 32;
+//        *c -= 32;
+        *c = toupper(*c);
     }
     return *c;
 }
