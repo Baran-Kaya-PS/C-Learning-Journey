@@ -247,7 +247,10 @@ int main() { // argc = argument count, argv = argument vector
 //    } else {
 //        printf("Non, il n'y a pas de saut de ligne.\n");
 //    }
-    char ch = 'b';
-    printf("Majuscule : %c\n", capitalize(&ch)); // Devrait afficher 'B'
-    return 0;
+//    char ch = 'b';
+//    printf("Majuscule : %c\n", capitalize(&ch)); // Devrait afficher 'B'
+//    return 0;
+    char str[] = "food fool foot";
+    printf("Avant censure : %s\n", str);
+    printf("Après censure : %s\n", censor(str));
 }
