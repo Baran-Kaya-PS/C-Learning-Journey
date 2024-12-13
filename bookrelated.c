@@ -238,3 +238,7 @@ void get_extension2(const char *file_name, char *extention){
         *extention = '\0'; // si on trouve pas d'extention extention devient caractère nul.
     }
 }
+void build_index_url(const char *domain, char *index_url){ // domain -> "knking.com", function add 'http://www." to the beginning
+    strcpy(index_url,"http://www");
+    strcat(index_url, domain);
+}
