@@ -253,3 +253,8 @@ bool test_extension(const char *file_name,const char *extension){ //file_name-> 
     }
     return *dot == '\0' && *extension == '\0'; // si les deux str ont la fin de caractère en même temps alors l'extension est la même
 }
+void remove_filename(char *url){
+    char *ls_ptr = strrchr(url,'/'); // ls = last slash
+    if (ls_ptr)
+        strcpy(ls_ptr,"\0"); // or *ls_ptr = '\0';
+}

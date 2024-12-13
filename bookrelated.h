@@ -42,3 +42,4 @@ void get_extension(const char *file_name, char *extention);
 void get_extension2(const char *file_name, char *extention);
 void build_index_url(const char *domain, char *index_url);
 bool test_extension(const char *file_name,const char *extension);
+void remove_filename(char *url);
