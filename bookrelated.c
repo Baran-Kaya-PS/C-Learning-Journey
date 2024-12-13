@@ -258,3 +258,16 @@ void remove_filename(char *url){
     if (ls_ptr)
         strcpy(ls_ptr,"\0"); // or *ls_ptr = '\0';
 }
+void reverse_name(char *name, int size){
+    char *p = name;
+    char reversed[size];
+    int index = 0;
+    while (*p != '\0') p++;
+    p--;
+    while (p >= name){
+        reversed[index++] = *p;
+        p--;
+    }
+    reversed[index] = '\0';
+    strcpy(name,reversed);
+}
