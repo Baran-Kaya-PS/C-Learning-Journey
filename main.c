@@ -282,13 +282,22 @@ int main() { // argc = argument count, argv = argument vector
 //
 //    get_extension2("archive.tar.gz", extension);
 //    printf("Extension de 'archive.tar.gz' : '%s'\n", extension);
-    char index_url[100];
-    char domain1[] = "knking.com";
-    build_index_url(domain1, index_url);
-    printf("Test 1 - Domain: %s -> Index URL: %s\n", domain1, index_url);
+//    char index_url[100];
+//    char domain1[] = "knking.com";
+//    build_index_url(domain1, index_url);
+//    printf("Test 1 - Domain: %s -> Index URL: %s\n", domain1, index_url);
+//
+//    char domain2[] = "example.org";
+//    build_index_url(domain2, index_url);
+//    printf("Test 2 - Domain: %s -> Index URL: %s\n", domain2, index_url);
+    /////////////////////////////////////////////////////////////////////////////////
 
-    char domain2[] = "example.org";
-    build_index_url(domain2, index_url);
-    printf("Test 2 - Domain: %s -> Index URL: %s\n", domain2, index_url);
+    /////////////////////////////////////////////////////////////////////////////////
+    printf("%d\n", test_extension("memo.txt", "TXT"));    // 1 (true)
+    printf("%d\n", test_extension("memo.txt", "txt"));    // 1 (true)
+    printf("%d\n", test_extension("memo.txt", "pdf"));    // 0 (false)
+    printf("%d\n", test_extension("memo", "txt"));        // 0 (false)
+    printf("%d\n", test_extension("memo.", "txt"));       // 0 (false)
+    printf("%d\n", test_extension(".hidden", "txt"));     // 0 (false)
     return 0;
 }
