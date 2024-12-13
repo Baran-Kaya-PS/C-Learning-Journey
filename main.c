@@ -273,13 +273,22 @@ int main() { // argc = argument count, argv = argument vector
 //    // Test 5 : Fichier avec point final
 //    get_extension("file.", extension);
 //    printf("Extension de 'file.' : '%s'\n", extension); // Attendu : ""
-    char extension[100];
-    get_extension2("example.txt", extension);
-    printf("Extension de 'example.txt' : '%s'\n", extension);
+//    char extension[100];
+//    get_extension2("example.txt", extension);
+//    printf("Extension de 'example.txt' : '%s'\n", extension);
+//
+//    get_extension2("example", extension);
+//    printf("Extension de 'example' : '%s'\n", extension);
+//
+//    get_extension2("archive.tar.gz", extension);
+//    printf("Extension de 'archive.tar.gz' : '%s'\n", extension);
+    char index_url[100];
+    char domain1[] = "knking.com";
+    build_index_url(domain1, index_url);
+    printf("Test 1 - Domain: %s -> Index URL: %s\n", domain1, index_url);
 
-    get_extension2("example", extension);
-    printf("Extension de 'example' : '%s'\n", extension);
-
-    get_extension2("archive.tar.gz", extension);
-    printf("Extension de 'archive.tar.gz' : '%s'\n", extension);
+    char domain2[] = "example.org";
+    build_index_url(domain2, index_url);
+    printf("Test 2 - Domain: %s -> Index URL: %s\n", domain2, index_url);
+    return 0;
 }
