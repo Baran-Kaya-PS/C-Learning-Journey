@@ -293,11 +293,22 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////////////////////////////
-    printf("%d\n", test_extension("memo.txt", "TXT"));    // 1 (true)
-    printf("%d\n", test_extension("memo.txt", "txt"));    // 1 (true)
-    printf("%d\n", test_extension("memo.txt", "pdf"));    // 0 (false)
-    printf("%d\n", test_extension("memo", "txt"));        // 0 (false)
-    printf("%d\n", test_extension("memo.", "txt"));       // 0 (false)
-    printf("%d\n", test_extension(".hidden", "txt"));     // 0 (false)
+//    printf("%d\n", test_extension("memo.txt", "TXT"));    // 1 (true)
+//    printf("%d\n", test_extension("memo.txt", "txt"));    // 1 (true)
+//    printf("%d\n", test_extension("memo.txt", "pdf"));    // 0 (false)
+//    printf("%d\n", test_extension("memo", "txt"));        // 0 (false)
+//    printf("%d\n", test_extension("memo.", "txt"));       // 0 (false)
+//    printf("%d\n", test_extension(".hidden", "txt"));     // 0 (false)
+    /////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////
+    char url1[] = "http://www.knking.com/index.html";
+    char url2[] = "http://www.knking.com/";
+
+    remove_filename(url1);
+    printf("URL 1: %s\n", url1); // Expected: "http://www.knking.com"
+
+    remove_filename(url2);
+    printf("URL 2: %s\n", url2); // Expected: "http://www.knking.com"
     return 0;
 }
