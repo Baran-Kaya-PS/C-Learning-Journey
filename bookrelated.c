@@ -239,6 +239,17 @@ void get_extension2(const char *file_name, char *extention){
     }
 }
 void build_index_url(const char *domain, char *index_url){ // domain -> "knking.com", function add 'http://www." to the beginning
-    strcpy(index_url,"http://www");
+    strcpy(index_url,"http://www.");
     strcat(index_url, domain);
+}
+bool test_extension(const char *file_name,const char *extension){ //file_name-> "file_name.exemple", function return true if file's extention matches with *extention value
+    const char *dot = strchr(file_name,'.'); // recherche la première occurence de point
+    if (!dot || *(dot+1) == '\0') return false;
+    dot++;
+    while (*dot && *extension){
+        if (toupper(*dot) != toupper(*extension)) return false;
+        dot++;
+        extension++;
+    }
+    return *dot == '\0' && *extension == '\0'; // si les deux str ont la fin de caractère en même temps alors l'extension est la même
 }
