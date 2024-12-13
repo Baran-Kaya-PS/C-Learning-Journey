@@ -302,13 +302,40 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////////////////////////////
-    char url1[] = "http://www.knking.com/index.html";
-    char url2[] = "http://www.knking.com/";
+//    char url1[] = "http://www.knking.com/index.html";
+//    char url2[] = "http://www.knking.com/";
+//
+//    remove_filename(url1);
+//    printf("URL 1: %s\n", url1); // Expected: "http://www.knking.com"
+//
+//    remove_filename(url2);
+//    printf("URL 2: %s\n", url2); // Expected: "http://www.knking.com"
+    /////////////////////////////////////////////////////////////////////////////////
 
-    remove_filename(url1);
-    printf("URL 1: %s\n", url1); // Expected: "http://www.knking.com"
+    /////////////////////////////////////////////////////////////////////////////////
+    char name1[] = "example";
+    reverse_name(name1, sizeof(name1));
+    printf("Test 1 - Original: example, Reversed: %s\n", name1); // Expected: elpmaxe
 
-    remove_filename(url2);
-    printf("URL 2: %s\n", url2); // Expected: "http://www.knking.com"
+    char name2[] = "hello";
+    reverse_name(name2, sizeof(name2));
+    printf("Test 2 - Original: hello, Reversed: %s\n", name2); // Expected: olleh
+
+    char name3[] = "racecar";
+    reverse_name(name3, sizeof(name3));
+    printf("Test 3 - Original: racecar, Reversed: %s\n", name3); // Expected: racecar (palindrome)
+
+    char name4[] = "a";
+    reverse_name(name4, sizeof(name4));
+    printf("Test 4 - Original: a, Reversed: %s\n", name4); // Expected: a (single character)
+
+    char name5[] = "";
+    reverse_name(name5, sizeof(name5));
+    printf("Test 5 - Original: (empty), Reversed: %s\n", name5); // Expected: (empty)
+
+    char name6[] = "1234567890";
+    reverse_name(name6, sizeof(name6));
+    printf("Test 6 - Original: 1234567890, Reversed: %s\n", name6); // Expected: 0987654321
     return 0;
+
 }
