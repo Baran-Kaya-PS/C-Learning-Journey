@@ -272,3 +272,19 @@ void reverse_name(char *name, int size){
 int str_to_int(const char *str){
     return atoi(str);
 }
+double compute_average_word_length(const char *sentence){
+    double word_count = 0;
+    double length = 0.0;
+    const char *p = sentence;
+    while (*p) {
+        if (isalpha(*p)){
+            length++;
+        } else if (p > sentence && isalpha(*(p-1)))
+            word_count++;
+        p++;
+    }
+    if (p > sentence && isalpha(*(p-1))) word_count++;
+
+    if (word_count > 0 && length > 0) return length/word_count;
+    return 0.0;
+}

@@ -49,3 +49,4 @@ bool test_extension(const char *file_name,const char *extension);
 void remove_filename(char *url);
 void reverse_name(char *name, int size);
 int str_to_int(const char *str);
+double compute_average_word_length(const char *sentence);
