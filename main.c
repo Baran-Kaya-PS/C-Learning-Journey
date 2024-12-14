@@ -313,29 +313,34 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////////////////////////////
-    char name1[] = "example";
-    reverse_name(name1, sizeof(name1));
-    printf("Test 1 - Original: example, Reversed: %s\n", name1); // Expected: elpmaxe
+//    char name1[] = "example";
+//    reverse_name(name1, sizeof(name1));
+//    printf("Test 1 - Original: example, Reversed: %s\n", name1); // Expected: elpmaxe
+//
+//    char name2[] = "hello";
+//    reverse_name(name2, sizeof(name2));
+//    printf("Test 2 - Original: hello, Reversed: %s\n", name2); // Expected: olleh
+//
+//    char name3[] = "racecar";
+//    reverse_name(name3, sizeof(name3));
+//    printf("Test 3 - Original: racecar, Reversed: %s\n", name3); // Expected: racecar (palindrome)
+//
+//    char name4[] = "a";
+//    reverse_name(name4, sizeof(name4));
+//    printf("Test 4 - Original: a, Reversed: %s\n", name4); // Expected: a (single character)
+//
+//    char name5[] = "";
+//    reverse_name(name5, sizeof(name5));
+//    printf("Test 5 - Original: (empty), Reversed: %s\n", name5); // Expected: (empty)
+//
+//    char name6[] = "1234567890";
+//    reverse_name(name6, sizeof(name6));
+//    printf("Test 6 - Original: 1234567890, Reversed: %s\n", name6); // Expected: 0987654321
 
-    char name2[] = "hello";
-    reverse_name(name2, sizeof(name2));
-    printf("Test 2 - Original: hello, Reversed: %s\n", name2); // Expected: olleh
+    const char *num_str = "123";
+    int result = str_to_int(num_str);
 
-    char name3[] = "racecar";
-    reverse_name(name3, sizeof(name3));
-    printf("Test 3 - Original: racecar, Reversed: %s\n", name3); // Expected: racecar (palindrome)
-
-    char name4[] = "a";
-    reverse_name(name4, sizeof(name4));
-    printf("Test 4 - Original: a, Reversed: %s\n", name4); // Expected: a (single character)
-
-    char name5[] = "";
-    reverse_name(name5, sizeof(name5));
-    printf("Test 5 - Original: (empty), Reversed: %s\n", name5); // Expected: (empty)
-
-    char name6[] = "1234567890";
-    reverse_name(name6, sizeof(name6));
-    printf("Test 6 - Original: 1234567890, Reversed: %s\n", name6); // Expected: 0987654321
+    printf("La chaine \"%s\" convertie en entier donne : %d\n", num_str, result);
     return 0;
 
 }
