@@ -341,53 +341,79 @@ int main() { // argc = argument count, argv = argument vector
 //    int result = str_to_int(num_str);
 //
 //    printf("La chaine \"%s\" convertie en entier donne : %d\n", num_str, result);
-    const char *test1 = "Hello world";
-    double expected1 = 5.0;
-    double result1 = compute_average_word_length(test1);
-    printf("Test 1 : \"%s\"\n", test1);
-    printf("  Resultat obtenu    : %.1f\n", result1);
-    printf("  Resultat attendu   : %.1f\n", expected1);
-    printf("  %s\n\n", (result1 == expected1) ? "Test reussi" : "Test echoue");
+//    const char *test1 = "Hello world";
+//    double expected1 = 5.0;
+//    double result1 = compute_average_word_length(test1);
+//    printf("Test 1 : \"%s\"\n", test1);
+//    printf("  Resultat obtenu    : %.1f\n", result1);
+//    printf("  Resultat attendu   : %.1f\n", expected1);
+//    printf("  %s\n\n", (result1 == expected1) ? "Test reussi" : "Test echoue");
+//
+//    const char *test2 = "Hello   world";
+//    double expected2 = 5.0;
+//    double result2 = compute_average_word_length(test2);
+//    printf("Test 2 : \"%s\"\n", test2);
+//    printf("  Resultat obtenu    : %.1f\n", result2);
+//    printf("  Resultat attendu   : %.1f\n", expected2);
+//    printf("  %s\n\n", (result2 == expected2) ? "Test reussi" : "Test echoue");
+//
+//    const char *test3 = "   Hello world   ";
+//    double expected3 = 5.0;
+//    double result3 = compute_average_word_length(test3);
+//    printf("Test 3 : \"%s\"\n", test3);
+//    printf("  Resultat obtenu    : %.1f\n", result3);
+//    printf("  Resultat attendu   : %.1f\n", expected3);
+//    printf("  %s\n\n", (result3 == expected3) ? "Test reussi" : "Test echoue");
+//
+//    const char *test4 = "Hello";
+//    double expected4 = 5.0;
+//    double result4 = compute_average_word_length(test4);
+//    printf("Test 4 : \"%s\"\n", test4);
+//    printf("  Resultat obtenu    : %.1f\n", result4);
+//    printf("  Resultat attendu   : %.1f\n", expected4);
+//    printf("  %s\n\n", (result4 == expected4) ? "Test reussi" : "Test echoue");
+//
+//    const char *test5 = "     ";
+//    double expected5 = 0.0;
+//    double result5 = compute_average_word_length(test5);
+//    printf("Test 5 : \"%s\"\n", test5);
+//    printf("  Resultat obtenu    : %.1f\n", result5);
+//    printf("  Resultat attendu   : %.1f\n", expected5);
+//    printf("  %s\n\n", (result5 == expected5) ? "Test reussi" : "Test echoue");
+//
+//    const char *test6 = "";
+//    double expected6 = 0.0;
+//    double result6 = compute_average_word_length(test6);
+//    printf("Test Bonus : \"%s\"\n", test6);
+//    printf("  Resultat obtenu    : %.1f\n", result6);
+//    printf("  Resultat attendu   : %.1f\n", expected6);
+//    printf("  %s\n\n", (result6 == expected6) ? "Test reussi" : "Test echoue");
+    /////////////////////////////////////////////////////////////////////////////////
 
-    const char *test2 = "Hello   world";
-    double expected2 = 5.0;
-    double result2 = compute_average_word_length(test2);
-    printf("Test 2 : \"%s\"\n", test2);
-    printf("  Resultat obtenu    : %.1f\n", result2);
-    printf("  Resultat attendu   : %.1f\n", expected2);
-    printf("  %s\n\n", (result2 == expected2) ? "Test reussi" : "Test echoue");
+    /////////////////////////////////////////////////////////////////////////////////
+    char test1[] = "HELLO";
+    encrypt(test1, 3); // Décalage de 3
+    printf("Test 1 : \"%s\" (Expected : \"KHOOR\")\n", test1);
 
-    const char *test3 = "   Hello world   ";
-    double expected3 = 5.0;
-    double result3 = compute_average_word_length(test3);
-    printf("Test 3 : \"%s\"\n", test3);
-    printf("  Resultat obtenu    : %.1f\n", result3);
-    printf("  Resultat attendu   : %.1f\n", expected3);
-    printf("  %s\n\n", (result3 == expected3) ? "Test reussi" : "Test echoue");
+    // Test 2 : Message avec des minuscules et des majuscules
+    char test2[] = "Hello World";
+    encrypt(test2, 5); // Décalage de 5
+    printf("Test 2 : \"%s\" (Expected : \"Mjqqt Btwqi\")\n", test2);
 
-    const char *test4 = "Hello";
-    double expected4 = 5.0;
-    double result4 = compute_average_word_length(test4);
-    printf("Test 4 : \"%s\"\n", test4);
-    printf("  Resultat obtenu    : %.1f\n", result4);
-    printf("  Resultat attendu   : %.1f\n", expected4);
-    printf("  %s\n\n", (result4 == expected4) ? "Test reussi" : "Test echoue");
+    // Test 3 : Message avec des caractères spéciaux (doit les ignorer)
+    char test3[] = "Encrypt! This: Works.";
+    encrypt(test3, 7); // Décalage de 7
+    printf("Test 3 : \"%s\" (Expected : \"Jujywfz! Aopz: Dvyth.\")\n", test3);
 
-    const char *test5 = "     ";
-    double expected5 = 0.0;
-    double result5 = compute_average_word_length(test5);
-    printf("Test 5 : \"%s\"\n", test5);
-    printf("  Resultat obtenu    : %.1f\n", result5);
-    printf("  Resultat attendu   : %.1f\n", expected5);
-    printf("  %s\n\n", (result5 == expected5) ? "Test reussi" : "Test echoue");
+    // Test 4 : Message avec un décalage négatif
+    char test4[] = "Khoor Zruog";
+    encrypt(test4, -3); // Décalage de -3 (inverse du décalage positif)
+    printf("Test 4 : \"%s\" (Expected : \"Hello World\")\n", test4);
 
-    const char *test6 = "";
-    double expected6 = 0.0;
-    double result6 = compute_average_word_length(test6);
-    printf("Test Bonus : \"%s\"\n", test6);
-    printf("  Resultat obtenu    : %.1f\n", result6);
-    printf("  Resultat attendu   : %.1f\n", expected6);
-    printf("  %s\n\n", (result6 == expected6) ? "Test reussi" : "Test echoue");
+    // Test 5 : Message vide
+    char test5[] = "";
+    encrypt(test5, 10); // Décalage quelconque sur une chaîne vide
+    printf("Test 5 : \"%s\" (Expected : \"\")\n", test5);
     return 0;
 
 }
