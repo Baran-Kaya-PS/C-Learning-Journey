@@ -50,3 +50,5 @@ void remove_filename(char *url);
 void reverse_name(char *name, int size);
 int str_to_int(const char *str);
 double compute_average_word_length(const char *sentence);
+void encrypt(char *message, int shift);
+char char_shift(char c,int n);

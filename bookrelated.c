@@ -288,3 +288,20 @@ double compute_average_word_length(const char *sentence){
     if (word_count > 0 && length > 0) return length/word_count;
     return 0.0;
 }
+void encrypt(char *message, int shift){
+    char *p = message;
+    while (*p != '\0'){
+        if (isalpha(*p))
+            *p = char_shift(*p,shift);
+        p++;
+    }
+}
+char char_shift(char c,int n){
+    char base;
+    if (islower(c)){
+        base = 'a';
+    } else {
+        base = 'A';
+    }
+    return (c - base + n + 26)%26 + base;  // on module sur la base pour rester à l'intérieur
+}
