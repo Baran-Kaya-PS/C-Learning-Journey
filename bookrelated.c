@@ -1,8 +1,6 @@
 //
 // Created by Baran on 12/6/2024.
 #include "bookrelated.h"
-#include <ctype.h>
-#include <string.h>
 
 // CHAPTER 11 POINTERS
 void increment(int *p) { // p est un pointeur
@@ -270,4 +268,7 @@ void reverse_name(char *name, int size){
     }
     reversed[index] = '\0';
     strcpy(name,reversed);
+}
+int str_to_int(const char *str){
+    return atoi(str);
 }

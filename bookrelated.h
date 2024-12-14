@@ -4,6 +4,10 @@
 
 #include <stdbool.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
+
 #ifndef MEMORY_GESTION_BOOKRELATED_H
 #define MEMORY_GESTION_BOOKRELATED_H
 #endif //MEMORY_GESTION_BOOKRELATED_H
@@ -44,3 +48,4 @@ void build_index_url(const char *domain, char *index_url);
 bool test_extension(const char *file_name,const char *extension);
 void remove_filename(char *url);
 void reverse_name(char *name, int size);
+int str_to_int(const char *str);
