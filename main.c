@@ -391,29 +391,47 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////////////////////////////
-    char test1[] = "HELLO";
-    encrypt(test1, 3); // Décalage de 3
-    printf("Test 1 : \"%s\" (Expected : \"KHOOR\")\n", test1);
+//    char test1[] = "HELLO";
+//    encrypt(test1, 3); // Décalage de 3
+//    printf("Test 1 : \"%s\" (Expected : \"KHOOR\")\n", test1);
+//
+//    // Test 2 : Message avec des minuscules et des majuscules
+//    char test2[] = "Hello World";
+//    encrypt(test2, 5); // Décalage de 5
+//    printf("Test 2 : \"%s\" (Expected : \"Mjqqt Btwqi\")\n", test2);
+//
+//    // Test 3 : Message avec des caractères spéciaux (doit les ignorer)
+//    char test3[] = "Encrypt! This: Works.";
+//    encrypt(test3, 7); // Décalage de 7
+//    printf("Test 3 : \"%s\" (Expected : \"Jujywfz! Aopz: Dvyth.\")\n", test3);
+//
+//    // Test 4 : Message avec un décalage négatif
+//    char test4[] = "Khoor Zruog";
+//    encrypt(test4, -3); // Décalage de -3 (inverse du décalage positif)
+//    printf("Test 4 : \"%s\" (Expected : \"Hello World\")\n", test4);
+//
+//    // Test 5 : Message vide
+//    char test5[] = "";
+//    encrypt(test5, 10); // Décalage quelconque sur une chaîne vide
+//    printf("Test 5 : \"%s\" (Expected : \"\")\n", test5);
+    /////////////////////////////////////////////////////////////////////////////////
 
-    // Test 2 : Message avec des minuscules et des majuscules
-    char test2[] = "Hello World";
-    encrypt(test2, 5); // Décalage de 5
-    printf("Test 2 : \"%s\" (Expected : \"Mjqqt Btwqi\")\n", test2);
+    /////////////////////////////////////////////////////////////////////////////////
+    const char *test1 = "radar";
+    const char *test2 = "hello";
+    const char *test3 = "a";
+    const char *test4 = "madam";
+    const char *test5 = "racecar";
+    const char *test6 = "world";
 
-    // Test 3 : Message avec des caractères spéciaux (doit les ignorer)
-    char test3[] = "Encrypt! This: Works.";
-    encrypt(test3, 7); // Décalage de 7
-    printf("Test 3 : \"%s\" (Expected : \"Jujywfz! Aopz: Dvyth.\")\n", test3);
+    // Résultats attendus
+    printf("'%s' est un palindrome ? %s\n", test1, isPalindrome2(test1, strlen(test1)) ? "Oui" : "Non");
+    printf("'%s' est un palindrome ? %s\n", test2, isPalindrome2(test2, strlen(test2)) ? "Oui" : "Non");
+    printf("'%s' est un palindrome ? %s\n", test3, isPalindrome2(test3, strlen(test3)) ? "Oui" : "Non");
+    printf("'%s' est un palindrome ? %s\n", test4, isPalindrome2(test4, strlen(test4)) ? "Oui" : "Non");
+    printf("'%s' est un palindrome ? %s\n", test5, isPalindrome2(test5, strlen(test5)) ? "Oui" : "Non");
+    printf("'%s' est un palindrome ? %s\n", test6, isPalindrome2(test6, strlen(test6)) ? "Oui" : "Non");
 
-    // Test 4 : Message avec un décalage négatif
-    char test4[] = "Khoor Zruog";
-    encrypt(test4, -3); // Décalage de -3 (inverse du décalage positif)
-    printf("Test 4 : \"%s\" (Expected : \"Hello World\")\n", test4);
-
-    // Test 5 : Message vide
-    char test5[] = "";
-    encrypt(test5, 10); // Décalage quelconque sur une chaîne vide
-    printf("Test 5 : \"%s\" (Expected : \"\")\n", test5);
     return 0;
 
 }
