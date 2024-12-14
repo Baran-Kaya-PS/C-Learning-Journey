@@ -52,3 +52,4 @@ int str_to_int(const char *str);
 double compute_average_word_length(const char *sentence);
 void encrypt(char *message, int shift);
 char char_shift(char c,int n);
+bool isPalindrome2(const char *c,int size);

@@ -135,6 +135,7 @@ char* reverseChar(const char *c,char *t, int size){
     for (i = 0; i < size;i++){
         t[i] = c[(size-1)-i];
     }
+    t[size] = '\0';
     return t;
 }
 bool isPalindrome(const char *c,int size){
@@ -304,4 +305,12 @@ char char_shift(char c,int n){
         base = 'A';
     }
     return (c - base + n + 26)%26 + base;  // on module sur la base pour rester à l'intérieur
+}
+bool isPalindrome2(const char *c,int size){
+    char *s = malloc(size+1);
+    if (!s) return false;
+    reverseChar(c,s,size);
+    bool res = (strcmp(c,s) == 0);
+    free(s);
+    return res;
 }
