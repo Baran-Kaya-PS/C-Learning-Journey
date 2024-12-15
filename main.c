@@ -10,6 +10,7 @@
 #define ROWS 4
 #define COLS 4
 #define MAX(x,y) ((x)>(y)?(x):(y)) // si x > y on retourne x sinon on retourne y
+#define IS_EVEN(n) ((n)%2==0) // si n mod 2 = 0 retourner vrai
 int main() { // argc = argument count, argv = argument vector
 //    printf("[DEBUG] Avant la boucle principale\n");
 //    srand(time(NULL));
