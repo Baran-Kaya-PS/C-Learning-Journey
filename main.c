@@ -471,7 +471,8 @@ int main() { // argc = argument count, argv = argument vector
     if (ev == 1) strcpy(is_true,"true");
     else strcpy(is_true,"false");
     printf("test IS_EVEN(2) : %s\n",is_true);
-
+    char c = TOUPPER('d');
+    printf("affichage du caractere avec macro TOUPPER %c",c);
     return 0;
 
 }
