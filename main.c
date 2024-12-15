@@ -465,6 +465,11 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
     int i = MAX(32,5);
     printf("test Max(32,5) : %d\n",i);
+    bool ev = IS_EVEN(2);
+    char is_true[10] = "";
+    if (ev == 1) strcpy(is_true,"true");
+    else strcpy(is_true,"false");
+    printf("test IS_EVEN(2) : %s",is_true);
     return 0;
 
 }
