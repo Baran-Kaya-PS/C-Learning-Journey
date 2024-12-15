@@ -417,20 +417,47 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////////////////////////////
-    const char *test1 = "radar";
-    const char *test2 = "hello";
-    const char *test3 = "a";
-    const char *test4 = "madam";
-    const char *test5 = "racecar";
-    const char *test6 = "world";
+//    const char *test1 = "radar";
+//    const char *test2 = "hello";
+//    const char *test3 = "a";
+//    const char *test4 = "madam";
+//    const char *test5 = "racecar";
+//    const char *test6 = "world";
+//
+//    // Résultats attendus
+//    printf("'%s' est un palindrome ? %s\n", test1, isPalindrome2(test1, strlen(test1)) ? "Oui" : "Non");
+//    printf("'%s' est un palindrome ? %s\n", test2, isPalindrome2(test2, strlen(test2)) ? "Oui" : "Non");
+//    printf("'%s' est un palindrome ? %s\n", test3, isPalindrome2(test3, strlen(test3)) ? "Oui" : "Non");
+//    printf("'%s' est un palindrome ? %s\n", test4, isPalindrome2(test4, strlen(test4)) ? "Oui" : "Non");
+//    printf("'%s' est un palindrome ? %s\n", test5, isPalindrome2(test5, strlen(test5)) ? "Oui" : "Non");
+//    printf("'%s' est un palindrome ? %s\n", test6, isPalindrome2(test6, strlen(test6)) ? "Oui" : "Non");
+    /////////////////////////////////////////////////////////////////////////////////
 
-    // Résultats attendus
-    printf("'%s' est un palindrome ? %s\n", test1, isPalindrome2(test1, strlen(test1)) ? "Oui" : "Non");
-    printf("'%s' est un palindrome ? %s\n", test2, isPalindrome2(test2, strlen(test2)) ? "Oui" : "Non");
-    printf("'%s' est un palindrome ? %s\n", test3, isPalindrome2(test3, strlen(test3)) ? "Oui" : "Non");
-    printf("'%s' est un palindrome ? %s\n", test4, isPalindrome2(test4, strlen(test4)) ? "Oui" : "Non");
-    printf("'%s' est un palindrome ? %s\n", test5, isPalindrome2(test5, strlen(test5)) ? "Oui" : "Non");
-    printf("'%s' est un palindrome ? %s\n", test6, isPalindrome2(test6, strlen(test6)) ? "Oui" : "Non");
+    /////////////////////////////////////////////////////////////////////////////////
+    // Cas de test 1 : Anagrammes simples
+    char word1_1[] = "listen";
+    char word2_1[] = "silent";
+    printf("Test 1: %s\n", is_anagrams(word1_1, word2_1) ? "Anagrammes" : "Pas des anagrammes");
+
+    // Cas de test 2 : Non-anagrammes simples
+    char word1_2[] = "hello";
+    char word2_2[] = "world";
+    printf("Test 2: %s\n", is_anagrams(word1_2, word2_2) ? "Anagrammes" : "Pas des anagrammes");
+
+    // Cas de test 3 : Anagrammes avec majuscules et minuscules
+    char word1_3[] = "Listen";
+    char word2_3[] = "Silent";
+    printf("Test 3: %s\n", is_anagrams(word1_3, word2_3) ? "Anagrammes" : "Pas des anagrammes");
+
+    // Cas de test 4 : Anagrammes avec caractères spéciaux
+    char word1_4[] = "123hello!";
+    char word2_4[] = "!123oellh";
+    printf("Test 4: %s\n", is_anagrams(word1_4, word2_4) ? "Anagrammes" : "Pas des anagrammes");
+
+    // Cas de test 5 : Non-anagrammes avec longueurs différentes
+    char word1_5[] = "hello";
+    char word2_5[] = "helloo";
+    printf("Test 5: %s\n", is_anagrams(word1_5, word2_5) ? "Anagrammes" : "Pas des anagrammes");
 
     return 0;
 
