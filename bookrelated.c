@@ -314,3 +314,19 @@ bool isPalindrome2(const char *c,int size){
     free(s);
     return res;
 }
+bool is_anagrams(const char *word1, const char *word2){
+    if (strlen(word1) != strlen(word2)) return false;
+    long counter = 0;
+    const char *p1 = word1,*p2 = word2;
+    while (*p1){
+        if (isalpha(*p1)) {
+            counter += tolower(*p1);
+        } else counter += *p1;
+        if (isalpha(*p2)) {
+            counter -= tolower(*p2);
+        } else counter -= *p2;
+        p1++;
+        p2++;
+    }
+    return counter == 0;
+}

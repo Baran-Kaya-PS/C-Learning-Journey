@@ -53,3 +53,4 @@ double compute_average_word_length(const char *sentence);
 void encrypt(char *message, int shift);
 char char_shift(char c,int n);
 bool isPalindrome2(const char *c,int size);
+bool is_anagrams(const char *word1, const char *word2);
