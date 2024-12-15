@@ -9,6 +9,7 @@
 #define MSG_LEN 50
 #define ROWS 4
 #define COLS 4
+#define MAX(x,y) ((x)>(y)?(x):(y)) // si x > y on retourne x sinon on retourne y
 int main() { // argc = argument count, argv = argument vector
 //    printf("[DEBUG] Avant la boucle principale\n");
 //    srand(time(NULL));
@@ -434,31 +435,34 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////////////////////////////
-    // Cas de test 1 : Anagrammes simples
-    char word1_1[] = "listen";
-    char word2_1[] = "silent";
-    printf("Test 1: %s\n", is_anagrams(word1_1, word2_1) ? "Anagrammes" : "Pas des anagrammes");
+//    // Cas de test 1 : Anagrammes simples
+//    char word1_1[] = "listen";
+//    char word2_1[] = "silent";
+//    printf("Test 1: %s\n", is_anagrams(word1_1, word2_1) ? "Anagrammes" : "Pas des anagrammes");
+//
+//    // Cas de test 2 : Non-anagrammes simples
+//    char word1_2[] = "hello";
+//    char word2_2[] = "world";
+//    printf("Test 2: %s\n", is_anagrams(word1_2, word2_2) ? "Anagrammes" : "Pas des anagrammes");
+//
+//    // Cas de test 3 : Anagrammes avec majuscules et minuscules
+//    char word1_3[] = "Listen";
+//    char word2_3[] = "Silent";
+//    printf("Test 3: %s\n", is_anagrams(word1_3, word2_3) ? "Anagrammes" : "Pas des anagrammes");
+//
+//    // Cas de test 4 : Anagrammes avec caractères spéciaux
+//    char word1_4[] = "123hello!";
+//    char word2_4[] = "!123oellh";
+//    printf("Test 4: %s\n", is_anagrams(word1_4, word2_4) ? "Anagrammes" : "Pas des anagrammes");
+//
+//    // Cas de test 5 : Non-anagrammes avec longueurs différentes
+//    char word1_5[] = "hello";
+//    char word2_5[] = "helloo";
+//    printf("Test 5: %s\n", is_anagrams(word1_5, word2_5) ? "Anagrammes" : "Pas des anagrammes");
+    /////////////////////////////////////////////////////////////////////////////////
 
-    // Cas de test 2 : Non-anagrammes simples
-    char word1_2[] = "hello";
-    char word2_2[] = "world";
-    printf("Test 2: %s\n", is_anagrams(word1_2, word2_2) ? "Anagrammes" : "Pas des anagrammes");
-
-    // Cas de test 3 : Anagrammes avec majuscules et minuscules
-    char word1_3[] = "Listen";
-    char word2_3[] = "Silent";
-    printf("Test 3: %s\n", is_anagrams(word1_3, word2_3) ? "Anagrammes" : "Pas des anagrammes");
-
-    // Cas de test 4 : Anagrammes avec caractères spéciaux
-    char word1_4[] = "123hello!";
-    char word2_4[] = "!123oellh";
-    printf("Test 4: %s\n", is_anagrams(word1_4, word2_4) ? "Anagrammes" : "Pas des anagrammes");
-
-    // Cas de test 5 : Non-anagrammes avec longueurs différentes
-    char word1_5[] = "hello";
-    char word2_5[] = "helloo";
-    printf("Test 5: %s\n", is_anagrams(word1_5, word2_5) ? "Anagrammes" : "Pas des anagrammes");
-
+    /////////////////////////////////////////////////////////////////////////////////
+    
     return 0;
 
 }
