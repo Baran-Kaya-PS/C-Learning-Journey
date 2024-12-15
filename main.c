@@ -11,6 +11,7 @@
 #define COLS 4
 #define MAX(x,y) ((x)>(y)?(x):(y)) // si x > y on retourne x sinon on retourne y
 #define IS_EVEN(n) ((n)%2==0) // si n mod 2 = 0 retourner vrai
+#define TOUPPER(c) ((c) >= 'a' && (c) <= 'z'? (c) - 'a' + 'A' : c)
 int main() { // argc = argument count, argv = argument vector
 //    printf("[DEBUG] Avant la boucle principale\n");
 //    srand(time(NULL));
@@ -469,7 +470,8 @@ int main() { // argc = argument count, argv = argument vector
     char is_true[10] = "";
     if (ev == 1) strcpy(is_true,"true");
     else strcpy(is_true,"false");
-    printf("test IS_EVEN(2) : %s",is_true);
+    printf("test IS_EVEN(2) : %s\n",is_true);
+
     return 0;
 
 }
