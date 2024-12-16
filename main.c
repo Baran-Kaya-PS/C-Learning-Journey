@@ -12,6 +12,12 @@
 #define MAX(x,y) ((x)>(y)?(x):(y)) // si x > y on retourne x sinon on retourne y
 #define IS_EVEN(n) ((n)%2==0) // si n mod 2 = 0 retourner vrai
 #define TOUPPER(c) ((c) >= 'a' && (c) <= 'z'? (c) - 'a' + 'A' : c)
+#define GENERIC_MAX(type)       \
+type type##_max(type x, type y) \
+{                               \
+    return x > y ? x : y        \
+}                               \
+// le define generic_max va remplacer type par int, float etc... en fonction du type donné
 int main() { // argc = argument count, argv = argument vector
 //    printf("[DEBUG] Avant la boucle principale\n");
 //    srand(time(NULL));
