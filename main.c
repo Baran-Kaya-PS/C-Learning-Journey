@@ -495,6 +495,7 @@ int main() { // argc = argument count, argv = argument vector
 //    char s[0];
 //    ECHO(s); // works
 //    printf("Compiled on %s at %s\n",__DATE__, __TIME__); // __DATE__ & __TIME__ Macro
+    CHECK_ZERO(0); // si l'élément en entrée est 0 alors alors on affiche la ligne ou cela est effectué
     return 0;
 
 }
