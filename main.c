@@ -14,6 +14,12 @@
 #define TOUPPER(c) ((c) >= 'a' && (c) <= 'z'? (c) - 'a' + 'A' : c)
 #define ECHO(s) {gets(s);puts(s);} // ECHO with comma
 #define ECHO2(s) {do {gets(s);puts(s);printf("\n");} while (0)
+
+#define CHECK_ZERO(divisor) \
+if (divisor == 0)       \
+    printf("*** Attempt to divide by zero on line %d " \
+            "of file %s ***\n", __LINE__,__FILE__) \
+
 #define GENERIC_MAX(type)       \
 type type##_max(type x, type y) \
 {                               \
@@ -486,9 +492,9 @@ int main() { // argc = argument count, argv = argument vector
     /////////////////////////////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////////////////////////////
-    char s[0];
-    ECHO(s); // works
-    printf("Compiled on %s at %s\n",__DATE__, __TIME__); // __DATE__ & __TIME__ Macro
+//    char s[0];
+//    ECHO(s); // works
+//    printf("Compiled on %s at %s\n",__DATE__, __TIME__); // __DATE__ & __TIME__ Macro
     return 0;
 
 }
