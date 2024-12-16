@@ -1,7 +1,8 @@
 //
 // Created by Baran on 12/6/2024.
 #include "bookrelated.h"
-
+#define FUNCTION_CALLED() printf("%s called\n",__func__);
+#define FUNCTION_RETURNS() printf("%s returns\n",__func__);
 // CHAPTER 11 POINTERS
 void increment(int *p) { // p est un pointeur
     *p = *p + 1; // Modifie la valeur de la variable pointée
