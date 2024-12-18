@@ -1,7 +1,7 @@
 //
 // Created by Baran on 12/6/2024.
 //
-#define SIZE 5
+#define SIZE 15
 #ifndef MEMORY_GESTION_ARRAYGENERATION_H
 #define MEMORY_GESTION_ARRAYGENERATION_H
 
