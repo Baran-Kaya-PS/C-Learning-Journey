@@ -3,6 +3,14 @@
 #include "bookrelated.h"
 #define FUNCTION_CALLED() printf("%s called\n",__func__);
 #define FUNCTION_RETURNS() printf("%s returns\n",__func__);
+#define DEBUG 1
+#define CHECK_DIVISOR(denominator) \
+    do { \
+        if((denominator)==0){ \
+            printf("Erreur : Divison par zéro non autorisée"); \
+            abort(); \
+    }                              \
+} while(0)                      \
 // CHAPTER 11 POINTERS
 void increment(int *p) { // p est un pointeur
     *p = *p + 1; // Modifie la valeur de la variable pointée
@@ -330,4 +338,14 @@ bool is_anagrams(const char *word1, const char *word2){
         p2++;
     }
     return counter == 0;
+}
+
+double divide(double numerator, double denominator){
+    CHECK_DIVISOR(denominator);
+#if DEBUG
+    printf("Debogage : Numérateur = : %lf, Dénominateur : %lf",numerator,denominator);
+#elif CHECK_DIVISOR()
+    #error Debug is off
+#endif
+    return numerator/denominator;
 }
