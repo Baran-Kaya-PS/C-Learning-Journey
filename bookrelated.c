@@ -3,6 +3,8 @@
 #include "bookrelated.h"
 #define EOF2 = '\0'
 #define STRINGIZE(x) #x
+#define CONCAT(x,y) x##y
+#define CONCAT2(x,y) CONCAT(x,y)
 #define FUNCTION_CALLED() printf("%s called\n",__func__);
 #define FUNCTION_RETURNS() printf("%s returns\n",__func__);
 #define DEBUG 1
