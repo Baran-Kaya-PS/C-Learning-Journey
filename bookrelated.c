@@ -5,6 +5,7 @@
 #define STRINGIZE(x) #x
 #define CONCAT(x,y) x##y
 #define CONCAT2(x,y) CONCAT(x,y)
+#define CUBE(x) x*x*x
 #define FUNCTION_CALLED() printf("%s called\n",__func__);
 #define FUNCTION_RETURNS() printf("%s returns\n",__func__);
 #define DEBUG 1
