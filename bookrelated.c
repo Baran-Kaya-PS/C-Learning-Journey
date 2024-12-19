@@ -2,6 +2,7 @@
 // Created by Baran on 12/6/2024.
 #include "bookrelated.h"
 #define EOF2 = '\0'
+#define STRINGIZE(x) #x
 #define FUNCTION_CALLED() printf("%s called\n",__func__);
 #define FUNCTION_RETURNS() printf("%s returns\n",__func__);
 #define DEBUG 1
