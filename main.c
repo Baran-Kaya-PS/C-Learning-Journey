@@ -17,6 +17,7 @@
 #define ECHO2(s) {do {gets(s);puts(s);printf("\n");} while (0)
 #define CHECK(x,y,n) (((x) >= 0 && (y) >= 0 && (x) <= ((n)-1) && (y) <= ((n)-1)) ? 1 : 0)
 #define MEDIAN(x,y,z) MAX(MIN(MAX((x),(y)),(z)),MIN((x),(y)))
+#define ERROR(fmt,...) fprintf(stderr,"DEBUG: " fmt "\n", __VA_ARGS__)
 #define CHECK_ZERO(divisor) \
 if (divisor == 0)       \
     printf("*** Attempt to divide by zero on line %d " \
@@ -497,7 +498,20 @@ int main() { // argc = argument count, argv = argument vector
 //    char s[0];
 //    ECHO(s); // works
 //    printf("Compiled on %s at %s\n",__DATE__, __TIME__); // __DATE__ & __TIME__ Macro
-    CHECK_ZERO(0); // si l'élément en entrée est 0 alors alors on affiche la ligne ou cela est effectué
-    return 0;
+    int value = 42;
+    int divisor = 0;
 
+    // Test 1 : Message simple
+    ERROR("Test simple avec une valeur : %d", value);
+
+    // Test 2 : Message plus complexe
+    if (divisor == 0) {
+        ERROR("Division par zero detectee. Diviseur : %d", divisor);
+    }
+
+    // Test 3 : Message avec plusieurs arguments
+    int x = 5, y = 10;
+    ERROR("Valeurs recues : x = %d, y = %d, somme = %d", x, y, x + y);
+
+    return 0;
 }
