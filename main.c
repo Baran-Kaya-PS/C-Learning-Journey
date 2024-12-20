@@ -10,6 +10,7 @@
 #define ROWS 4
 #define COLS 4
 #define MAX(x,y) ((x)>(y)?(x):(y)) // si x > y on retourne x sinon on retourne y
+#define MIN(x,y) ((x)>(y) ? (y):(x))
 #define IS_EVEN(n) ((n)%2==0) // si n mod 2 = 0 retourner vrai
 #define TOUPPER(c) ((c) >= 'a' && (c) <= 'z'? (c) - 'a' + 'A' : c)
 #define ECHO(s) {gets(s);puts(s);} // ECHO with comma
