@@ -18,6 +18,7 @@
 #define CHECK(x,y,n) (((x) >= 0 && (y) >= 0 && (x) <= ((n)-1) && (y) <= ((n)-1)) ? 1 : 0)
 #define MEDIAN(x,y,z) MAX(MIN(MAX((x),(y)),(z)),MIN((x),(y)))
 #define ERROR(fmt,...) fprintf(stderr,"DEBUG: " fmt "\n", __VA_ARGS__) // https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
+#define LOG(fmt, ...) fprintf(stderr, "LOG: " fmt "\n", __VA_ARGS__)
 #define CHECK_ZERO(divisor) \
 if (divisor == 0)       \
     printf("*** Attempt to divide by zero on line %d " \
@@ -512,6 +513,15 @@ int main() { // argc = argument count, argv = argument vector
     // Test 3 : Message avec plusieurs arguments
     int x = 5, y = 10;
     ERROR("Valeurs recues : x = %d, y = %d, somme = %d", x, y, x + y);
+
+    int a = 5;
+    float b = 3.14;
+    const char *msg = "Hello, World!";
+
+    LOG("Integer value: %d", a);
+    LOG("Float value: %.2f", b);
+    LOG("Message: %s", msg);
+    LOG("Multiple values: %d, %.2f, %s", a, b, msg);
 
     return 0;
 }
