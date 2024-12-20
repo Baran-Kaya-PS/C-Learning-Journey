@@ -14,6 +14,7 @@
 #define TOUPPER(c) ((c) >= 'a' && (c) <= 'z'? (c) - 'a' + 'A' : c)
 #define ECHO(s) {gets(s);puts(s);} // ECHO with comma
 #define ECHO2(s) {do {gets(s);puts(s);printf("\n");} while (0)
+#define CHECK(x,y,n) (((x) >= 0 && (y) >= 0 && (x) <= ((n)-1) && (y) <= ((n)-1)) ? 1 : 0)
 
 #define CHECK_ZERO(divisor) \
 if (divisor == 0)       \
