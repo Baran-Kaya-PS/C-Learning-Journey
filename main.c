@@ -16,7 +16,7 @@
 #define ECHO(s) {gets(s);puts(s);} // ECHO with comma
 #define ECHO2(s) {do {gets(s);puts(s);printf("\n");} while (0)
 #define CHECK(x,y,n) (((x) >= 0 && (y) >= 0 && (x) <= ((n)-1) && (y) <= ((n)-1)) ? 1 : 0)
-#define MEDIAN(x,y,z) Max(Min(Max((x),(y)),(z)),Min((x),(y)))
+#define MEDIAN(x,y,z) MAX(MIN(MAX((x),(y)),(z)),MIN((x),(y)))
 #define CHECK_ZERO(divisor) \
 if (divisor == 0)       \
     printf("*** Attempt to divide by zero on line %d " \
