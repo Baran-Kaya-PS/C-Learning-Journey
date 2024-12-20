@@ -17,7 +17,7 @@
 #define ECHO2(s) {do {gets(s);puts(s);printf("\n");} while (0)
 #define CHECK(x,y,n) (((x) >= 0 && (y) >= 0 && (x) <= ((n)-1) && (y) <= ((n)-1)) ? 1 : 0)
 #define MEDIAN(x,y,z) MAX(MIN(MAX((x),(y)),(z)),MIN((x),(y)))
-#define ERROR(fmt,...) fprintf(stderr,"DEBUG: " fmt "\n", __VA_ARGS__)
+#define ERROR(fmt,...) fprintf(stderr,"DEBUG: " fmt "\n", __VA_ARGS__) // https://gcc.gnu.org/onlinedocs/cpp/Variadic-Macros.html
 #define CHECK_ZERO(divisor) \
 if (divisor == 0)       \
     printf("*** Attempt to divide by zero on line %d " \
