@@ -15,16 +15,12 @@
 #include "stdio.h"
 #include "stdbool.h"
 #include "string.h"
-#include "bookrelated.h"
+#include "word.h"
+#include "../bookrelated.h"
 #ifndef MEMORY_GESTION_JUSTIFY_H
 #define MEMORY_GESTION_JUSTIFY_H
 #endif //MEMORY_GESTION_JUSTIFY_H
 
 char *justify();
-/*
- * read_word: Reads the next words from the input and stores it in word.
- * Makes word empty if no word could be read because of EOF.
- * Truncate the words if its lenght exceeds len.
- */
-void read_word(char *word, int len);
+
 
