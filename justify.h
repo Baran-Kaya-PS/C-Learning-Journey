@@ -4,6 +4,7 @@
 /*
  * justify file format a quote to justify it
  */
+#include "stdbool.h"
 #ifndef MEMORY_GESTION_JUSTIFY_H
 #define MEMORY_GESTION_JUSTIFY_H
 #endif //MEMORY_GESTION_JUSTIFY_H
