@@ -3,6 +3,7 @@
 //
 /*
  * justify file format a quote to justify it
+ * constraints : max word length is 20
  * how it should work ?
  * 1. We get the text
  * 2. If the text exist => the algorithm continues
@@ -18,4 +19,12 @@
 #ifndef MEMORY_GESTION_JUSTIFY_H
 #define MEMORY_GESTION_JUSTIFY_H
 #endif //MEMORY_GESTION_JUSTIFY_H
-/* #define EOF = '\0' */ // replaced by EOF Macro inside stdio.h
+
+char *justify();
+/*
+ * read_word: Reads the next words from the input and stores it in word.
+ * Makes word empty if no word could be read because of EOF.
+ * Truncate the words if its lenght exceeds len.
+ */
+void read_word(char *word, int len);
+
