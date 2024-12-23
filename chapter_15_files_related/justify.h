@@ -16,10 +16,12 @@
 #include "stdbool.h"
 #include "string.h"
 #include "word.h"
+#include "line.h"
 #include "../bookrelated.h"
 #ifndef MEMORY_GESTION_JUSTIFY_H
 #define MEMORY_GESTION_JUSTIFY_H
 #endif //MEMORY_GESTION_JUSTIFY_H
+#define MAX_WORD_LEN 20
 
 char *justify();
 
