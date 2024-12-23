@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 
-#ifndef MEMORY_GESTION_BOOKRELATED_H
+#ifndef MEMORY_GESTION_BOOKRELATED_H // Permet de ne pas include plusieurs fois le même fichier header dans le main
 #define MEMORY_GESTION_BOOKRELATED_H
 #endif //MEMORY_GESTION_BOOKRELATED_H
 
