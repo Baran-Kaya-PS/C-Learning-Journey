@@ -14,6 +14,7 @@
 #include "stdio.h"
 #include "stdbool.h"
 #include "string.h"
+#include "bookrelated.h"
 #ifndef MEMORY_GESTION_JUSTIFY_H
 #define MEMORY_GESTION_JUSTIFY_H
 #endif //MEMORY_GESTION_JUSTIFY_H
