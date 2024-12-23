@@ -3,6 +3,12 @@
 //
 /*
  * justify file format a quote to justify it
+ * how it should work ?
+ * 1. We get the text
+ * 2. If the text exist => the algorithm continues
+ * 3. If the text is not justified we continue
+ * 4. Apply algorithms to justify the text
+ * 5. Return the text
  */
 #include "stdlib.h"
 #include "stdio.h"
