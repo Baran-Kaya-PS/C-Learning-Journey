@@ -15,3 +15,10 @@ void clearline(){
     line_len = 0;
     num_words = 0;
 }
+void addword(const char *word){
+    if (num_words > 0){
+        line[line_len] = ' ';
+        line[line_len+1] = '\0';
+        line_len++;
+    }
+}
