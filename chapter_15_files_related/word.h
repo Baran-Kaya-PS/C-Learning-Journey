@@ -16,4 +16,4 @@ void read_word(char *word, int len);
 /*
  * read_char
  */
-char read_char(void);
+int read_char(void);
