@@ -21,4 +21,11 @@ void addword(const char *word){
         line[line_len+1] = '\0';
         line_len++;
     }
+    strcat(line,word);
+    line_len += strlen(word);
+    num_words++;
+}
+
+int space_remaning(){
+    return MAX_LINE_LEN - line_len;
 }
