@@ -3,6 +3,14 @@
 //
 
 #include "word.h"
-void read_word(char *word, int len) {
 
+void read_word(char *word, int len) {}
+int read_char(void){
+    int ch = getchar();
+
+    if (ch == '\n' || ch == '\t'){
+        return ' ';
+    }
+
+    return ch;
 }
