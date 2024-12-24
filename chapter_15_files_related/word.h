@@ -14,6 +14,7 @@
 void read_word(char *word, int len);
 
 /*
- * read_char
+ * read_char get the input,
+ * if we get a '\t' or a '\n' we return ' ' (a space) to justify the input
  */
 int read_char(void);
