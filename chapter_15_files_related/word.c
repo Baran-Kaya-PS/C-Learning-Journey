@@ -2,7 +2,7 @@
 // Created by Baran on 12/23/2024.
 //
 
-#include "stdio.h"
+#include <stdio.h>
 #include "word.h"
 
 void read_word(char *word, int len) {
@@ -21,9 +21,5 @@ void read_word(char *word, int len) {
 int read_char(void){
     int ch = getchar();
 
-    if (ch == '\n' || ch == '\t'){
-        return ' ';
-    }
-
-    return ch;
+    return (ch == '\n' || ch == '\t') ? ' ' : ch; // si ch saut de ligne ou tab => ' ', sinon ch
 }
