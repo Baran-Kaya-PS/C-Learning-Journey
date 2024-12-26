@@ -47,3 +47,9 @@ void write_line(void){
     }
     putchar('\n');
 }
+
+void flush_line(void){
+    if (line_len > 0){
+        puts(line);
+    }
+}
